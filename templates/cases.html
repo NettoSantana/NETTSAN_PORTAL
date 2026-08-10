@@ -1,0 +1,32 @@
+<!-- CAMINHO COMPLETO: C:\Users\vlula\OneDrive\Área de Trabalho\Projetos Backup\NETTSAN_PORTAL\templates\cases.html -->
+<!-- DATA E HORA DO ULTIMO RECODE: 2026-08-10 11:10 -03:00 -->
+<!-- MOTIVO DA ALTERACAO: Criar a pagina inicial de cases para apresentar projetos e resultados da NettSan. -->
+{% extends "base.html" %}
+
+{% block title %}Cases | NettSan Technology{% endblock %}
+{% block meta_description %}Conheça áreas de projetos da NettSan em gestão empresarial, monitoramento industrial e segurança de máquinas.{% endblock %}
+
+{% block content %}
+<section class="page-hero section page-hero-compact">
+    <div class="container">
+        <span class="eyebrow">Cases</span>
+        <h1>Da necessidade à solução implantada.</h1>
+        <p>Esta área será dedicada a projetos reais, desafios encontrados, soluções aplicadas e resultados autorizados para divulgação.</p>
+    </div>
+</section>
+
+<section class="section section-soft">
+    <div class="container case-grid">
+        <article><span>GestFlow</span><h3>Gestão empresarial</h3><p>Projetos de organização de processos comerciais e operacionais em uma única plataforma.</p></article>
+        <article><span>IndFlow</span><h3>Monitoramento industrial</h3><p>Projetos de coleta e visualização de informações diretamente do processo produtivo.</p></article>
+        <article><span>NR-12</span><h3>Segurança de máquinas</h3><p>Projetos de proteções, enclausuramentos e melhorias de segurança em equipamentos.</p></article>
+    </div>
+</section>
+
+<section class="section final-cta">
+    <div class="container final-cta-inner">
+        <div><span class="eyebrow eyebrow-light">Seu projeto</span><h2>Tem um desafio parecido?</h2><p>Apresente sua necessidade e avaliamos a melhor forma de começar.</p></div>
+        <a class="button button-white" href="{{ url_for('contato') }}">Falar com a NettSan</a>
+    </div>
+</section>
+{% endblock %}

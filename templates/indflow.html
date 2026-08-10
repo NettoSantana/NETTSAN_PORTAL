@@ -1,0 +1,46 @@
+<!-- CAMINHO COMPLETO: C:\Users\vlula\OneDrive\Área de Trabalho\Projetos Backup\NETTSAN_PORTAL\templates\indflow.html -->
+<!-- DATA E HORA DO ULTIMO RECODE: 2026-08-10 11:10 -03:00 -->
+<!-- MOTIVO DA ALTERACAO: Criar a pagina comercial inicial do IndFlow dentro do portal NettSan. -->
+{% extends "base.html" %}
+
+{% block title %}IndFlow | Monitoramento Industrial em Tempo Real{% endblock %}
+{% block meta_description %}Conheça o IndFlow, solução NettSan para monitorar produção, paradas e desempenho de máquinas diretamente do chão de fábrica.{% endblock %}
+
+{% block content %}
+<section class="page-hero section">
+    <div class="container page-hero-grid">
+        <div>
+            <span class="eyebrow">IndFlow</span>
+            <h1>Transforme sua produção em informação.</h1>
+            <p>Monitore máquinas, produção, paradas e indicadores diretamente do chão de fábrica para enxergar o que está acontecendo na operação.</p>
+            <a class="button" href="{{ url_for('contato') }}">Solicitar apresentação</a>
+        </div>
+        <div class="page-visual page-visual-indflow">
+            <span class="visual-tag">Operação conectada</span>
+            <strong>RUN / STOP · Produção · Paradas · Indicadores</strong>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <div class="section-heading">
+            <span class="eyebrow">Chão de fábrica</span>
+            <h2>Dados simples para decisões operacionais melhores.</h2>
+        </div>
+        <div class="feature-grid">
+            <article><h3>Produção em tempo real</h3><p>Acompanhe a evolução da produção ao longo do turno.</p></article>
+            <article><h3>RUN / STOP</h3><p>Visualize quando a máquina está produzindo e quando está parada.</p></article>
+            <article><h3>Histórico</h3><p>Consulte informações anteriores para identificar comportamento e recorrências.</p></article>
+            <article><h3>Indicadores</h3><p>Concentre informações importantes em uma visão operacional simples.</p></article>
+        </div>
+    </div>
+</section>
+
+<section class="section final-cta">
+    <div class="container final-cta-inner">
+        <div><span class="eyebrow eyebrow-light">IndFlow</span><h2>Quer enxergar melhor sua produção?</h2><p>Apresente o processo e avaliamos onde o monitoramento pode começar.</p></div>
+        <a class="button button-white" href="{{ url_for('contato') }}">Falar com a NettSan</a>
+    </div>
+</section>
+{% endblock %}

@@ -1,0 +1,46 @@
+<!-- CAMINHO COMPLETO: C:\Users\vlula\OneDrive\Área de Trabalho\Projetos Backup\NETTSAN_PORTAL\templates\gestflow.html -->
+<!-- DATA E HORA DO ULTIMO RECODE: 2026-08-10 11:10 -03:00 -->
+<!-- MOTIVO DA ALTERACAO: Criar a pagina comercial inicial do GestFlow dentro do portal NettSan. -->
+{% extends "base.html" %}
+
+{% block title %}GestFlow | Gestão Empresarial sem Complicação{% endblock %}
+{% block meta_description %}Conheça o GestFlow, sistema da NettSan para centralizar clientes, vendas, estoque, financeiro, ordens de serviço e atividades.{% endblock %}
+
+{% block content %}
+<section class="page-hero section">
+    <div class="container page-hero-grid">
+        <div>
+            <span class="eyebrow">GestFlow</span>
+            <h1>Gestão empresarial sem complicação.</h1>
+            <p>Centralize processos comerciais e operacionais em um único sistema e reduza a dependência de planilhas, papel e controles espalhados.</p>
+            <a class="button" href="{{ url_for('contato') }}">Solicitar demonstração</a>
+        </div>
+        <div class="page-visual page-visual-gestflow">
+            <span class="visual-tag">Gestão em um só lugar</span>
+            <strong>Clientes · Vendas · Estoque · Financeiro · OS</strong>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <div class="section-heading">
+            <span class="eyebrow">Visão inicial</span>
+            <h2>Organize a rotina da empresa em uma única operação.</h2>
+        </div>
+        <div class="feature-grid">
+            <article><h3>Clientes e relacionamento</h3><p>Informações centralizadas para acompanhar a relação comercial com cada cliente.</p></article>
+            <article><h3>Vendas e serviços</h3><p>Controle de vendas, ordens de serviço e atividades em um fluxo mais organizado.</p></article>
+            <article><h3>Estoque</h3><p>Acompanhe produtos, movimentações e necessidades da operação.</p></article>
+            <article><h3>Financeiro</h3><p>Tenha mais clareza sobre valores a receber, a pagar e movimentações do negócio.</p></article>
+        </div>
+    </div>
+</section>
+
+<section class="section final-cta">
+    <div class="container final-cta-inner">
+        <div><span class="eyebrow eyebrow-light">GestFlow</span><h2>Quer ver o sistema funcionando?</h2><p>Solicite uma demonstração e conheça o fluxo na prática.</p></div>
+        <a class="button button-white" href="{{ url_for('contato') }}">Solicitar demonstração</a>
+    </div>
+</section>
+{% endblock %}

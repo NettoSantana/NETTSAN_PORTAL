@@ -1,0 +1,47 @@
+<!-- CAMINHO COMPLETO: C:\Users\vlula\OneDrive\Área de Trabalho\Projetos Backup\NETTSAN_PORTAL\templates\nr12.html -->
+<!-- DATA E HORA DO ULTIMO RECODE: 2026-08-10 11:10 -03:00 -->
+<!-- MOTIVO DA ALTERACAO: Criar a pagina comercial inicial de seguranca de maquinas e servicos relacionados a NR-12. -->
+{% extends "base.html" %}
+
+{% block title %}NR-12 e Segurança de Máquinas | NettSan Technology{% endblock %}
+{% block meta_description %}Soluções NettSan para segurança de máquinas: proteções, enclausuramentos, intertravamentos e adequações relacionadas à NR-12.{% endblock %}
+
+{% block content %}
+<section class="page-hero section">
+    <div class="container page-hero-grid">
+        <div>
+            <span class="eyebrow">Segurança de máquinas / NR-12</span>
+            <h1>Segurança aplicada à realidade da sua máquina.</h1>
+            <p>Desenvolvemos e implantamos soluções de proteção e segurança considerando o equipamento, o processo e a necessidade operacional.</p>
+            <a class="button" href="{{ url_for('contato') }}">Solicitar avaliação</a>
+        </div>
+        <div class="page-visual page-visual-nr12">
+            <span class="visual-tag">Segurança industrial</span>
+            <strong>Proteções · Enclausuramentos · Intertravamentos</strong>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <div class="section-heading">
+            <span class="eyebrow">Serviços</span>
+            <h2>Soluções para reduzir exposição a riscos em máquinas e equipamentos.</h2>
+            <p>O escopo técnico e as responsabilidades aplicáveis são definidos conforme a necessidade de cada projeto.</p>
+        </div>
+        <div class="feature-grid">
+            <article><h3>Proteções mecânicas</h3><p>Barreiras e proteções projetadas para restringir o acesso a zonas de risco.</p></article>
+            <article><h3>Enclausuramentos</h3><p>Soluções físicas para controlar o acesso e proteger áreas do equipamento.</p></article>
+            <article><h3>Intertravamentos</h3><p>Portas e acessos associados a sistemas de segurança conforme o projeto definido.</p></article>
+            <article><h3>Adequações</h3><p>Implantação de melhorias elétricas e mecânicas dentro do escopo estabelecido para a máquina.</p></article>
+        </div>
+    </div>
+</section>
+
+<section class="section final-cta">
+    <div class="container final-cta-inner">
+        <div><span class="eyebrow eyebrow-light">Segurança de máquinas</span><h2>Existe uma máquina que precisa de avaliação?</h2><p>Conte qual equipamento ou necessidade sua empresa precisa tratar.</p></div>
+        <a class="button button-white" href="{{ url_for('contato') }}">Solicitar avaliação</a>
+    </div>
+</section>
+{% endblock %}

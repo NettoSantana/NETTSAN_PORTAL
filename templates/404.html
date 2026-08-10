@@ -1,0 +1,18 @@
+<!-- CAMINHO COMPLETO: C:\Users\vlula\OneDrive\Área de Trabalho\Projetos Backup\NETTSAN_PORTAL\templates\404.html -->
+<!-- DATA E HORA DO ULTIMO RECODE: 2026-08-10 11:10 -03:00 -->
+<!-- MOTIVO DA ALTERACAO: Criar uma pagina de erro 404 coerente com a identidade visual inicial do portal NettSan. -->
+{% extends "base.html" %}
+
+{% block title %}Página não encontrada | NettSan Technology{% endblock %}
+{% block meta_description %}Página não encontrada no portal NettSan Technology.{% endblock %}
+
+{% block content %}
+<section class="section error-page">
+    <div class="container">
+        <span class="eyebrow">Erro 404</span>
+        <h1>Esta página não foi encontrada.</h1>
+        <p>O endereço pode ter mudado ou não existir.</p>
+        <a class="button" href="{{ url_for('home') }}">Voltar para o início</a>
+    </div>
+</section>
+{% endblock %}

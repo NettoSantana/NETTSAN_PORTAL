@@ -1,0 +1,15 @@
+# CAMINHO COMPLETO: C:\Users\vlula\OneDrive\Área de Trabalho\Projetos Backup\NETTSAN_PORTAL\.gitignore
+# DATA E HORA DO ULTIMO RECODE: 2026-08-10 11:10 -03:00
+# MOTIVO DA ALTERACAO: Evitar o versionamento de arquivos locais, temporarios e ambientes virtuais do portal NettSan.
+
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.env
+.env.*
+!.env.example
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

@@ -1,0 +1,91 @@
+<!-- CAMINHO COMPLETO: C:\Users\vlula\OneDrive\Área de Trabalho\Projetos Backup\NETTSAN_PORTAL\templates\base.html -->
+<!-- DATA E HORA DO ULTIMO RECODE: 2026-08-10 11:10 -03:00 -->
+<!-- MOTIVO DA ALTERACAO: Criar a estrutura visual compartilhada, navegacao e rodape das paginas publicas da NettSan. -->
+<!doctype html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#184178">
+    <meta name="description" content="{% block meta_description %}Soluções NettSan em gestão empresarial, monitoramento industrial e segurança de máquinas.{% endblock %}">
+    <title>{% block title %}NettSan Technology{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/site.css') }}">
+    <script defer src="{{ url_for('static', filename='js/site.js') }}"></script>
+</head>
+<body>
+    <a class="skip-link" href="#conteudo">Ir para o conteúdo</a>
+
+    <header class="site-header" data-site-header>
+        <div class="container header-inner">
+            <a class="brand" href="{{ url_for('home') }}" aria-label="NettSan Technology - Início">
+                <span class="brand-mark" aria-hidden="true">N</span>
+                <span class="brand-copy">
+                    <strong>NettSan</strong>
+                    <small>Technology</small>
+                </span>
+            </a>
+
+            <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="menu-principal" data-nav-toggle>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span class="sr-only">Abrir menu</span>
+            </button>
+
+            <nav class="main-nav" id="menu-principal" aria-label="Navegação principal" data-main-nav>
+                <a href="{{ url_for('home') }}" {% if request.endpoint == 'home' %}aria-current="page"{% endif %}>Início</a>
+                <a href="{{ url_for('gestflow') }}" {% if request.endpoint == 'gestflow' %}aria-current="page"{% endif %}>GestFlow</a>
+                <a href="{{ url_for('indflow') }}" {% if request.endpoint == 'indflow' %}aria-current="page"{% endif %}>IndFlow</a>
+                <a href="{{ url_for('nr12') }}" {% if request.endpoint == 'nr12' %}aria-current="page"{% endif %}>NR-12</a>
+                <a href="{{ url_for('cases') }}" {% if request.endpoint == 'cases' %}aria-current="page"{% endif %}>Cases</a>
+                <a href="{{ url_for('sobre') }}" {% if request.endpoint == 'sobre' %}aria-current="page"{% endif %}>Sobre</a>
+            </nav>
+
+            <a class="button button-small header-cta" href="{{ url_for('contato') }}">Falar com a NettSan</a>
+        </div>
+    </header>
+
+    <main id="conteudo">
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-grid">
+            <div>
+                <a class="brand brand-footer" href="{{ url_for('home') }}" aria-label="NettSan Technology - Início">
+                    <span class="brand-mark" aria-hidden="true">N</span>
+                    <span class="brand-copy">
+                        <strong>NettSan</strong>
+                        <small>Technology</small>
+                    </span>
+                </a>
+                <p>Tecnologia e engenharia para gestão, produção e segurança industrial.</p>
+            </div>
+
+            <div>
+                <h2>Soluções</h2>
+                <a href="{{ url_for('gestflow') }}">GestFlow</a>
+                <a href="{{ url_for('indflow') }}">IndFlow</a>
+                <a href="{{ url_for('nr12') }}">Segurança de máquinas / NR-12</a>
+            </div>
+
+            <div>
+                <h2>Empresa</h2>
+                <a href="{{ url_for('cases') }}">Cases</a>
+                <a href="{{ url_for('sobre') }}">Sobre</a>
+                <a href="{{ url_for('contato') }}">Contato</a>
+            </div>
+
+            <div>
+                <h2>Atuação</h2>
+                <p>Salvador e Região Metropolitana / BA</p>
+                <a class="text-link" href="{{ url_for('contato') }}">Solicitar contato →</a>
+            </div>
+        </div>
+        <div class="container footer-bottom">
+            <span>© <span data-current-year></span> NettSan Technology.</span>
+            <span>Gestão · Produção · Segurança</span>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,271 @@
+<!-- CAMINHO COMPLETO: C:\Users\vlula\OneDrive\Área de Trabalho\Projetos Backup\NETTSAN_PORTAL\templates\index.html -->
+<!-- DATA E HORA DO ULTIMO RECODE: 2026-08-10 11:10 -03:00 -->
+<!-- MOTIVO DA ALTERACAO: Criar a primeira versao comercial da Home da NettSan com foco em GestFlow, IndFlow, NR-12 e conversao de visitantes. -->
+{% extends "base.html" %}
+
+{% block title %}NettSan Technology | Gestão, Produção e Segurança Industrial{% endblock %}
+
+{% block meta_description %}Tecnologia e engenharia para sua empresa operar melhor: gestão empresarial com GestFlow, monitoramento industrial com IndFlow e segurança de máquinas / NR-12.{% endblock %}
+
+{% block content %}
+<section class="hero section">
+    <div class="container hero-grid">
+        <div class="hero-copy">
+            <span class="eyebrow">Tecnologia + Engenharia Industrial</span>
+            <h1>Tecnologia e engenharia para sua empresa <span>operar melhor.</span></h1>
+            <p>Soluções em gestão, monitoramento industrial e segurança de máquinas, desenvolvidas para transformar problemas reais em processos mais simples, produtivos e seguros.</p>
+            <div class="hero-actions">
+                <a class="button" href="#solucoes">Conhecer soluções</a>
+                <a class="button button-ghost" href="{{ url_for('contato') }}">Falar com um especialista</a>
+            </div>
+            <div class="hero-tags" aria-label="Principais soluções">
+                <a href="{{ url_for('gestflow') }}">GestFlow</a>
+                <a href="{{ url_for('indflow') }}">IndFlow</a>
+                <a href="{{ url_for('nr12') }}">Segurança de máquinas / NR-12</a>
+            </div>
+        </div>
+
+        <div class="hero-visual" aria-label="Representação de tecnologia aplicada à indústria">
+            <div class="industrial-frame">
+                <div class="machine-line">
+                    <span class="machine-unit machine-unit-a"></span>
+                    <span class="machine-unit machine-unit-b"></span>
+                    <span class="machine-unit machine-unit-c"></span>
+                    <span class="machine-conveyor"></span>
+                </div>
+                <div class="status-dot"><span></span>Operação conectada</div>
+            </div>
+
+            <div class="dashboard-card">
+                <div class="dashboard-head">
+                    <div>
+                        <small>Produção em tempo real</small>
+                        <strong>1.248</strong>
+                    </div>
+                    <span class="live-pill">ONLINE</span>
+                </div>
+                <div class="dashboard-bars" aria-hidden="true">
+                    <span style="height: 46%"></span>
+                    <span style="height: 61%"></span>
+                    <span style="height: 54%"></span>
+                    <span style="height: 78%"></span>
+                    <span style="height: 69%"></span>
+                    <span style="height: 91%"></span>
+                    <span style="height: 83%"></span>
+                    <span style="height: 100%"></span>
+                </div>
+                <div class="dashboard-metrics">
+                    <div><small>Status</small><strong>Produzindo</strong></div>
+                    <div><small>Disponibilidade</small><strong>92%</strong></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="position-strip" aria-label="Áreas de atuação">
+    <div class="container position-strip-grid">
+        <span>Gestão empresarial</span>
+        <span>Produção em tempo real</span>
+        <span>Segurança de máquinas / NR-12</span>
+    </div>
+</section>
+
+<section class="section" id="solucoes">
+    <div class="container">
+        <div class="section-heading">
+            <span class="eyebrow">Soluções NettSan</span>
+            <h2>Qual problema você precisa resolver?</h2>
+            <p>Começamos pela necessidade da sua operação e direcionamos para a solução certa.</p>
+        </div>
+
+        <div class="solution-grid">
+            <article class="solution-card">
+                <span class="solution-number">01</span>
+                <span class="solution-label">Quero organizar minha empresa</span>
+                <h3>GestFlow</h3>
+                <p>Clientes, vendas, estoque, financeiro, ordens de serviço e processos da empresa em um único ambiente.</p>
+                <ul>
+                    <li>Controle da operação</li>
+                    <li>Informação centralizada</li>
+                    <li>Menos planilhas e retrabalho</li>
+                </ul>
+                <a class="text-link" href="{{ url_for('gestflow') }}">Conhecer o GestFlow →</a>
+            </article>
+
+            <article class="solution-card solution-card-featured">
+                <span class="solution-number">02</span>
+                <span class="solution-label">Quero acompanhar minha produção</span>
+                <h3>IndFlow</h3>
+                <p>Monitoramento de máquinas, produção, paradas e indicadores diretamente do chão de fábrica.</p>
+                <ul>
+                    <li>Produção em tempo real</li>
+                    <li>Histórico de paradas</li>
+                    <li>Indicadores operacionais</li>
+                </ul>
+                <a class="text-link" href="{{ url_for('indflow') }}">Conhecer o IndFlow →</a>
+            </article>
+
+            <article class="solution-card">
+                <span class="solution-number">03</span>
+                <span class="solution-label">Preciso melhorar a segurança das máquinas</span>
+                <h3>Segurança / NR-12</h3>
+                <p>Proteções, enclausuramentos, intertravamentos e adequações aplicadas às necessidades de cada equipamento.</p>
+                <ul>
+                    <li>Proteções e enclausuramentos</li>
+                    <li>Sistemas de intertravamento</li>
+                    <li>Adequações de máquinas</li>
+                </ul>
+                <a class="text-link" href="{{ url_for('nr12') }}">Conhecer soluções NR-12 →</a>
+            </article>
+        </div>
+    </div>
+</section>
+
+<section class="section section-blue">
+    <div class="container split-section">
+        <div>
+            <span class="eyebrow eyebrow-light">O diferencial NettSan</span>
+            <h2>Tecnologia que entende a operação.</h2>
+        </div>
+        <div class="split-copy">
+            <p>A NettSan une desenvolvimento de sistemas, automação e experiência industrial para criar soluções aplicáveis à rotina real das empresas.</p>
+            <div class="pillar-grid">
+                <div><strong>Tecnologia</strong><span>Sistemas para simplificar processos.</span></div>
+                <div><strong>Dados</strong><span>Informação para acompanhar a operação.</span></div>
+                <div><strong>Engenharia</strong><span>Soluções aplicadas ao ambiente industrial.</span></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section product-showcase">
+    <div class="container showcase-grid">
+        <div class="showcase-copy">
+            <span class="eyebrow">GestFlow</span>
+            <h2>Controle sua operação em um único lugar.</h2>
+            <p>Uma visão integrada para acompanhar clientes, vendas, serviços, estoque e financeiro sem depender de controles espalhados.</p>
+            <div class="chip-row">
+                <span>Clientes</span><span>Vendas</span><span>Estoque</span><span>Financeiro</span><span>OS</span><span>Atividades</span>
+            </div>
+            <a class="button" href="{{ url_for('gestflow') }}">Ver GestFlow</a>
+        </div>
+        <div class="browser-mockup">
+            <div class="browser-top"><span></span><span></span><span></span></div>
+            <div class="browser-body">
+                <aside class="mock-sidebar">
+                    <b>N</b>
+                    <i></i><i></i><i></i><i></i><i></i>
+                </aside>
+                <div class="mock-main">
+                    <div class="mock-title"></div>
+                    <div class="mock-kpis">
+                        <span></span><span></span><span></span>
+                    </div>
+                    <div class="mock-table">
+                        <i></i><i></i><i></i><i></i><i></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section section-soft product-showcase">
+    <div class="container showcase-grid showcase-reverse">
+        <div class="showcase-copy">
+            <span class="eyebrow">IndFlow</span>
+            <h2>Saiba o que está acontecendo na sua produção agora.</h2>
+            <p>Transforme sinais do chão de fábrica em informações de produção, parada e desempenho que ajudam a operação a agir mais rápido.</p>
+            <div class="metric-list">
+                <div><strong>RUN / STOP</strong><span>Status da máquina</span></div>
+                <div><strong>Produção</strong><span>Contagem e histórico</span></div>
+                <div><strong>Indicadores</strong><span>Visão da operação</span></div>
+            </div>
+            <a class="button" href="{{ url_for('indflow') }}">Conhecer IndFlow</a>
+        </div>
+        <div class="production-panel">
+            <div class="production-head">
+                <div><small>Máquina</small><strong>LINHA 01</strong></div>
+                <span class="live-pill">RUN</span>
+            </div>
+            <div class="production-value">
+                <small>Produção do turno</small>
+                <strong>8.420</strong>
+                <span>peças</span>
+            </div>
+            <div class="timeline">
+                <span class="run" style="width: 24%"></span>
+                <span class="stop" style="width: 8%"></span>
+                <span class="run" style="width: 38%"></span>
+                <span class="stop" style="width: 5%"></span>
+                <span class="run" style="width: 25%"></span>
+            </div>
+            <div class="production-foot">
+                <div><small>Disponibilidade</small><strong>91%</strong></div>
+                <div><small>Paradas</small><strong>04</strong></div>
+                <div><small>Meta</small><strong>93%</strong></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section nr12-showcase">
+    <div class="container nr12-grid">
+        <div>
+            <span class="eyebrow">Segurança de máquinas</span>
+            <h2>Soluções e adequações relacionadas à NR-12.</h2>
+            <p>Da identificação da necessidade à implantação de proteções e sistemas de segurança, com foco em soluções aplicáveis à realidade do equipamento e da operação.</p>
+            <a class="button" href="{{ url_for('nr12') }}">Solicitar avaliação</a>
+        </div>
+        <div class="nr12-services">
+            <div><span>01</span><strong>Proteções mecânicas</strong></div>
+            <div><span>02</span><strong>Enclausuramentos</strong></div>
+            <div><span>03</span><strong>Portas e acessos intertravados</strong></div>
+            <div><span>04</span><strong>Sistemas e dispositivos de segurança</strong></div>
+        </div>
+    </div>
+</section>
+
+<section class="section section-soft">
+    <div class="container">
+        <div class="section-heading section-heading-inline">
+            <div>
+                <span class="eyebrow">Cases</span>
+                <h2>Da necessidade à solução implantada.</h2>
+            </div>
+            <a class="text-link" href="{{ url_for('cases') }}">Ver nossos cases →</a>
+        </div>
+        <div class="case-grid">
+            <article><span>Software</span><h3>Gestão empresarial</h3><p>Processos integrados em uma única plataforma para reduzir controles paralelos.</p></article>
+            <article><span>Indústria 4.0</span><h3>Monitoramento de produção</h3><p>Coleta de dados do chão de fábrica para acompanhar produção e paradas.</p></article>
+            <article><span>Segurança</span><h3>Proteção de máquinas</h3><p>Projetos e implantações voltados à redução de exposição a riscos mecânicos.</p></article>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <div class="section-heading">
+            <span class="eyebrow">Como trabalhamos</span>
+            <h2>Do problema à operação.</h2>
+        </div>
+        <div class="process-grid">
+            <article><span>01</span><h3>Entendemos</h3><p>Conhecemos a necessidade e o contexto da operação.</p></article>
+            <article><span>02</span><h3>Planejamos</h3><p>Definimos a solução adequada para o problema identificado.</p></article>
+            <article><span>03</span><h3>Implantamos</h3><p>Colocamos a solução em funcionamento e acompanhamos sua aplicação.</p></article>
+        </div>
+    </div>
+</section>
+
+<section class="section final-cta">
+    <div class="container final-cta-inner">
+        <div>
+            <span class="eyebrow eyebrow-light">Vamos conversar</span>
+            <h2>Qual desafio sua empresa enfrenta hoje?</h2>
+            <p>Gestão, produção ou segurança de máquinas: conte para a NettSan o que você precisa resolver.</p>
+        </div>
+        <a class="button button-white" href="{{ url_for('contato') }}">Falar com a NettSan</a>
+    </div>
+</section>
+{% endblock %}

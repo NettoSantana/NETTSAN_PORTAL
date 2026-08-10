@@ -1,0 +1,37 @@
+<!-- CAMINHO COMPLETO: C:\Users\vlula\OneDrive\Área de Trabalho\Projetos Backup\NETTSAN_PORTAL\templates\sobre.html -->
+<!-- DATA E HORA DO ULTIMO RECODE: 2026-08-10 11:10 -03:00 -->
+<!-- MOTIVO DA ALTERACAO: Criar a pagina institucional inicial da NettSan e consolidar o posicionamento tecnologia mais industria. -->
+{% extends "base.html" %}
+
+{% block title %}Sobre a NettSan Technology{% endblock %}
+{% block meta_description %}Conheça a NettSan Technology, empresa que conecta desenvolvimento de sistemas, dados, automação e experiência industrial.{% endblock %}
+
+{% block content %}
+<section class="page-hero section">
+    <div class="container page-hero-grid">
+        <div>
+            <span class="eyebrow">Sobre a NettSan</span>
+            <h1>Tecnologia conectada à operação real.</h1>
+            <p>A NettSan nasce da combinação entre experiência industrial e desenvolvimento de soluções digitais, com foco em resolver necessidades concretas de empresas e operações.</p>
+        </div>
+        <div class="page-visual page-visual-about">
+            <span class="visual-tag">NettSan Technology</span>
+            <strong>Tecnologia · Dados · Engenharia</strong>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container split-section split-section-light">
+        <div><span class="eyebrow">Nosso posicionamento</span><h2>Entender primeiro. Desenvolver depois.</h2></div>
+        <div class="split-copy"><p>Buscamos compreender o processo, a rotina e o problema antes de indicar uma solução. Isso vale para software, monitoramento industrial e segurança de máquinas.</p><p>O objetivo é entregar ferramentas e projetos que façam sentido no ambiente em que serão utilizados.</p></div>
+    </div>
+</section>
+
+<section class="section final-cta">
+    <div class="container final-cta-inner">
+        <div><span class="eyebrow eyebrow-light">NettSan</span><h2>Vamos entender seu desafio?</h2><p>Conte o que sua empresa precisa melhorar hoje.</p></div>
+        <a class="button button-white" href="{{ url_for('contato') }}">Entrar em contato</a>
+    </div>
+</section>
+{% endblock %}

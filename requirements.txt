@@ -1,0 +1,6 @@
+# CAMINHO COMPLETO: C:\Users\vlula\OneDrive\Área de Trabalho\Projetos Backup\NETTSAN_PORTAL\requirements.txt
+# DATA E HORA DO ULTIMO RECODE: 2026-08-10 11:10 -03:00
+# MOTIVO DA ALTERACAO: Declarar somente as dependencias iniciais necessarias para executar o portal NettSan.
+
+Flask
+waitress
