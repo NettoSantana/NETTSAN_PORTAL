@@ -1,6 +1,6 @@
 <!-- CAMINHO COMPLETO: C:\Users\vlula\OneDrive\Área de Trabalho\Projetos Backup\NETTSAN_PORTAL\templates\index.html -->
-<!-- DATA E HORA DO ULTIMO RECODE: 2026-08-10 11:10 -03:00 -->
-<!-- MOTIVO DA ALTERACAO: Criar a primeira versao comercial da Home da NettSan com foco em GestFlow, IndFlow, NR-12 e conversao de visitantes. -->
+<!-- DATA E HORA DO ULTIMO RECODE: 2026-08-11 17:48 -03:00 -->
+<!-- MOTIVO DA ALTERACAO: Compactar o HERO da Home, melhorar a primeira dobra e reforcar o posicionamento comercial da NettSan. -->
 {% extends "base.html" %}
 
 {% block title %}NettSan Technology | Gestão, Produção e Segurança Industrial{% endblock %}
@@ -12,11 +12,11 @@
     <div class="container hero-grid">
         <div class="hero-copy">
             <span class="eyebrow">Tecnologia + Engenharia Industrial</span>
-            <h1>Tecnologia e engenharia para sua empresa <span>operar melhor.</span></h1>
-            <p>Soluções em gestão, monitoramento industrial e segurança de máquinas, desenvolvidas para transformar problemas reais em processos mais simples, produtivos e seguros.</p>
+            <h1>Tecnologia e engenharia para <span>operar melhor.</span></h1>
+            <p>Gestão, monitoramento industrial e segurança de máquinas em soluções aplicadas à rotina real da sua empresa.</p>
             <div class="hero-actions">
                 <a class="button" href="#solucoes">Conhecer soluções</a>
-                <a class="button button-ghost" href="{{ url_for('contato') }}">Falar com um especialista</a>
+                <a class="button button-ghost" href="{{ url_for('contato') }}">Falar com a NettSan</a>
             </div>
             <div class="hero-tags" aria-label="Principais soluções">
                 <a href="{{ url_for('gestflow') }}">GestFlow</a>
@@ -25,7 +25,7 @@
             </div>
         </div>
 
-        <div class="hero-visual" aria-label="Representação de tecnologia aplicada à indústria">
+        <div class="hero-visual" aria-label="Tecnologia conectada ao ambiente industrial">
             <div class="industrial-frame">
                 <div class="machine-line">
                     <span class="machine-unit machine-unit-a"></span>
@@ -33,7 +33,7 @@
                     <span class="machine-unit machine-unit-c"></span>
                     <span class="machine-conveyor"></span>
                 </div>
-                <div class="status-dot"><span></span>Operação conectada</div>
+                <div class="status-dot"><span></span>Operação industrial conectada</div>
             </div>
 
             <div class="dashboard-card">
