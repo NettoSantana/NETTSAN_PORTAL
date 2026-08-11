@@ -1,0 +1,13 @@
+# CAMINHO COMPLETO: C:\Users\vlula\OneDrive\Área de Trabalho\Projetos Backup\NETTSAN_PORTAL\railway.toml
+# DATA E HORA DO ULTIMO RECODE: 2026-08-11 17:19 -03:00
+# MOTIVO DA ALTERACAO: Configurar build, inicializacao, healthcheck e reinicio do NETTSAN_PORTAL no Railway.
+
+[build]
+builder = "RAILPACK"
+
+[deploy]
+startCommand = "waitress-serve --host=0.0.0.0 --port=$PORT wsgi:application"
+healthcheckPath = "/health"
+healthcheckTimeout = 300
+restartPolicyType = "ON_FAILURE"
+restartPolicyMaxRetries = 10
