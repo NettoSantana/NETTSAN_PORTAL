@@ -1,6 +1,6 @@
 <!-- CAMINHO COMPLETO: C:\Users\vlula\OneDrive\Área de Trabalho\Projetos Backup\NETTSAN_PORTAL\templates\base.html -->
-<!-- DATA E HORA DO ULTIMO RECODE: 2026-08-10 11:10 -03:00 -->
-<!-- MOTIVO DA ALTERACAO: Criar a estrutura visual compartilhada, navegacao e rodape das paginas publicas da NettSan. -->
+<!-- DATA E HORA DO ULTIMO RECODE: 2026-08-11 18:35 -03:00 -->
+<!-- MOTIVO DA ALTERACAO: Substituir a marca recriada em HTML pela logo oficial da NettSan e pelo simbolo N oficial no mobile e rodape. -->
 <!doctype html>
 <html lang="pt-BR">
 <head>
@@ -18,11 +18,8 @@
     <header class="site-header" data-site-header>
         <div class="container header-inner">
             <a class="brand" href="{{ url_for('home') }}" aria-label="NettSan Technology - Início">
-                <span class="brand-mark" aria-hidden="true">N</span>
-                <span class="brand-copy">
-                    <strong>NettSan</strong>
-                    <small>Technology</small>
-                </span>
+                <img class="brand-logo brand-logo-full" src="{{ url_for('static', filename='img/brand/nettsan-logo.png') }}" alt="NettSan Technology">
+                <img class="brand-logo brand-logo-mark" src="{{ url_for('static', filename='img/brand/nettsan-n.png') }}" alt="" aria-hidden="true">
             </a>
 
             <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="menu-principal" data-nav-toggle>
@@ -53,11 +50,7 @@
         <div class="container footer-grid">
             <div>
                 <a class="brand brand-footer" href="{{ url_for('home') }}" aria-label="NettSan Technology - Início">
-                    <span class="brand-mark" aria-hidden="true">N</span>
-                    <span class="brand-copy">
-                        <strong>NettSan</strong>
-                        <small>Technology</small>
-                    </span>
+                    <img class="brand-logo brand-logo-mark brand-logo-footer" src="{{ url_for('static', filename='img/brand/nettsan-n.png') }}" alt="" aria-hidden="true">
                 </a>
                 <p>Tecnologia e engenharia para gestão, produção e segurança industrial.</p>
             </div>
