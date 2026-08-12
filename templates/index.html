@@ -1,6 +1,6 @@
 <!-- CAMINHO COMPLETO: C:\Users\vlula\OneDrive\Área de Trabalho\Projetos Backup\NETTSAN_PORTAL\templates\index.html -->
-<!-- DATA E HORA DO ULTIMO RECODE: 2026-08-11 17:48 -03:00 -->
-<!-- MOTIVO DA ALTERACAO: Compactar o HERO da Home, melhorar a primeira dobra e reforcar o posicionamento comercial da NettSan. -->
+<!-- DATA E HORA DO ULTIMO RECODE: 2026-08-11 21:07 -03:00 -->
+<!-- MOTIVO DA ALTERACAO: Reforcar NR-12 com atuacao mecanica e eletrica e apresentar GestFlow e IndFlow sendo validados em empresas com telas dos sistemas. -->
 {% extends "base.html" %}
 
 {% block title %}NettSan Technology | Gestão, Produção e Segurança Industrial{% endblock %}
@@ -8,6 +8,181 @@
 {% block meta_description %}Tecnologia e engenharia para sua empresa operar melhor: gestão empresarial com GestFlow, monitoramento industrial com IndFlow e segurança de máquinas / NR-12.{% endblock %}
 
 {% block content %}
+<style>
+.validation-stage {
+    position: relative;
+    min-height: 520px;
+    overflow: hidden;
+    border-radius: 28px;
+    border: 1px solid rgba(22, 69, 127, .12);
+    background: #0d2747;
+    box-shadow: 0 28px 70px rgba(13, 39, 71, .16);
+}
+.validation-stage > img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.validation-stage::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(6, 25, 49, .10), rgba(6, 25, 49, .64));
+}
+.validation-badge {
+    position: absolute;
+    z-index: 3;
+    top: 20px;
+    left: 20px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 9px 12px;
+    border-radius: 999px;
+    background: rgba(255,255,255,.94);
+    color: #16457f;
+    font-size: .78rem;
+    font-weight: 800;
+    box-shadow: 0 10px 24px rgba(0,0,0,.12);
+}
+.validation-badge::before {
+    content: "";
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #1ea66a;
+}
+.system-screen {
+    position: absolute;
+    z-index: 4;
+    right: 22px;
+    bottom: 22px;
+    width: min(82%, 520px);
+    overflow: hidden;
+    border-radius: 18px;
+    border: 1px solid rgba(255,255,255,.52);
+    background: rgba(255,255,255,.98);
+    box-shadow: 0 22px 54px rgba(0,0,0,.28);
+}
+.system-screen-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 12px 15px;
+    color: #fff;
+    background: #16457f;
+}
+.system-screen-top strong { font-size: .9rem; }
+.system-screen-top span { font-size: .72rem; opacity: .82; }
+.gestflow-ui { padding: 15px; }
+.gestflow-kpis {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 9px;
+}
+.gestflow-kpis div {
+    padding: 11px;
+    border-radius: 11px;
+    background: #f1f5f9;
+}
+.gestflow-kpis small,
+.indflow-mini small {
+    display: block;
+    color: #6b7788;
+    font-size: .62rem;
+    margin-bottom: 4px;
+}
+.gestflow-kpis strong { color: #0d2747; font-size: .9rem; }
+.gestflow-table {
+    margin-top: 12px;
+    overflow: hidden;
+    border: 1px solid #e4eaf1;
+    border-radius: 10px;
+}
+.gestflow-row {
+    display: grid;
+    grid-template-columns: 1.3fr .8fr .7fr;
+    gap: 8px;
+    padding: 9px 10px;
+    font-size: .67rem;
+    color: #4e5d70;
+    border-bottom: 1px solid #edf1f5;
+}
+.gestflow-row:last-child { border-bottom: 0; }
+.gestflow-row.head { font-weight: 800; color: #16457f; background: #f8fafc; }
+.indflow-ui { padding: 15px; }
+.indflow-mini-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 9px;
+}
+.indflow-mini {
+    padding: 11px;
+    border-radius: 11px;
+    background: #f1f5f9;
+}
+.indflow-mini strong { color: #0d2747; font-size: .92rem; }
+.indflow-run { color: #138a58 !important; }
+.indflow-timeline {
+    display: flex;
+    height: 16px;
+    margin: 14px 0 10px;
+    overflow: hidden;
+    border-radius: 999px;
+    background: #e9eef5;
+}
+.indflow-timeline span.run { background: #1ea66a; }
+.indflow-timeline span.stop { background: #cf3f4f; }
+.indflow-caption {
+    display: flex;
+    justify-content: space-between;
+    gap: 8px;
+    color: #647184;
+    font-size: .65rem;
+}
+.nr12-dual {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+    margin-top: 24px;
+}
+.nr12-discipline {
+    padding: 24px;
+    border: 1px solid #dfe7f1;
+    border-radius: 20px;
+    background: #fff;
+}
+.nr12-discipline span {
+    display: inline-block;
+    margin-bottom: 10px;
+    color: #16457f;
+    font-size: .76rem;
+    font-weight: 900;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+}
+.nr12-discipline h3 { margin-bottom: 12px; color: #0d2747; }
+.nr12-discipline ul { margin: 0; padding-left: 18px; }
+.nr12-discipline li { margin: 7px 0; color: #586779; line-height: 1.5; }
+.nr12-services.nr12-services-wide {
+    grid-template-columns: 1fr;
+}
+@media (max-width: 900px) {
+    .validation-stage { min-height: 470px; }
+    .system-screen { width: calc(100% - 36px); right: 18px; bottom: 18px; }
+    .nr12-dual { grid-template-columns: 1fr; }
+}
+@media (max-width: 560px) {
+    .validation-stage { min-height: 430px; }
+    .gestflow-kpis,
+    .indflow-mini-grid { grid-template-columns: 1fr; }
+    .gestflow-row { grid-template-columns: 1fr .8fr; }
+    .gestflow-row span:last-child { display: none; }
+}
+</style>
 <section class="hero section">
     <div class="container hero-grid">
         <div class="hero-copy">
@@ -110,11 +285,11 @@
                 <span class="solution-number">03</span>
                 <span class="solution-label">Preciso melhorar a segurança das máquinas</span>
                 <h3>Segurança / NR-12</h3>
-                <p>Proteções, enclausuramentos, intertravamentos e adequações aplicadas às necessidades de cada equipamento.</p>
+                <p>Adequações mecânicas e elétricas para segurança de máquinas, integrando proteção física, comando e dispositivos de segurança conforme o escopo do equipamento.</p>
                 <ul>
-                    <li>Proteções e enclausuramentos</li>
-                    <li>Sistemas de intertravamento</li>
-                    <li>Adequações de máquinas</li>
+                    <li>Proteções mecânicas e enclausuramentos</li>
+                    <li>Intertravamentos, sensores e barreiras</li>
+                    <li>Painéis e adequações elétricas</li>
                 </ul>
                 <a class="text-link" href="{{ url_for('nr12') }}">Conhecer soluções NR-12 →</a>
             </article>
@@ -143,27 +318,33 @@
     <div class="container showcase-grid">
         <div class="showcase-copy">
             <span class="eyebrow">GestFlow</span>
-            <h2>Controle sua operação em um único lugar.</h2>
-            <p>Uma visão integrada para acompanhar clientes, vendas, serviços, estoque e financeiro sem depender de controles espalhados.</p>
+            <h2>O sistema sendo validado dentro da rotina da empresa.</h2>
+            <p>Gestão deixa de ser uma tela isolada: equipe e responsáveis conseguem acompanhar clientes, vendas, serviços, estoque e financeiro no mesmo ambiente.</p>
             <div class="chip-row">
                 <span>Clientes</span><span>Vendas</span><span>Estoque</span><span>Financeiro</span><span>OS</span><span>Atividades</span>
             </div>
             <a class="button" href="{{ url_for('gestflow') }}">Ver GestFlow</a>
         </div>
-        <div class="browser-mockup">
-            <div class="browser-top"><span></span><span></span><span></span></div>
-            <div class="browser-body">
-                <aside class="mock-sidebar">
-                    <b>N</b>
-                    <i></i><i></i><i></i><i></i><i></i>
-                </aside>
-                <div class="mock-main">
-                    <div class="mock-title"></div>
-                    <div class="mock-kpis">
-                        <span></span><span></span><span></span>
+
+        <div class="validation-stage" aria-label="Equipe validando o GestFlow em ambiente empresarial">
+            <img src="https://images.unsplash.com/photo-1758873268364-15bef4162221?auto=format&amp;fit=crop&amp;fm=jpg&amp;q=70&amp;w=1600" alt="Profissionais analisando informações em um notebook durante validação de sistema">
+            <span class="validation-badge">Validação na empresa</span>
+            <div class="system-screen" aria-label="Tela ilustrativa do GestFlow">
+                <div class="system-screen-top">
+                    <strong>GestFlow · Dashboard</strong>
+                    <span>Gestão empresarial</span>
+                </div>
+                <div class="gestflow-ui">
+                    <div class="gestflow-kpis">
+                        <div><small>Receber hoje</small><strong>R$ 12.480</strong></div>
+                        <div><small>Vendas abertas</small><strong>18</strong></div>
+                        <div><small>OS em andamento</small><strong>07</strong></div>
                     </div>
-                    <div class="mock-table">
-                        <i></i><i></i><i></i><i></i><i></i>
+                    <div class="gestflow-table">
+                        <div class="gestflow-row head"><span>Operação</span><span>Status</span><span>Valor</span></div>
+                        <div class="gestflow-row"><span>Orçamento #184</span><span>Aguardando</span><span>R$ 3.250</span></div>
+                        <div class="gestflow-row"><span>Venda #362</span><span>Concluída</span><span>R$ 1.890</span></div>
+                        <div class="gestflow-row"><span>OS #097</span><span>Em execução</span><span>R$ 4.600</span></div>
                     </div>
                 </div>
             </div>
@@ -175,8 +356,8 @@
     <div class="container showcase-grid showcase-reverse">
         <div class="showcase-copy">
             <span class="eyebrow">IndFlow</span>
-            <h2>Saiba o que está acontecendo na sua produção agora.</h2>
-            <p>Transforme sinais do chão de fábrica em informações de produção, parada e desempenho que ajudam a operação a agir mais rápido.</p>
+            <h2>Dados da produção sendo validados onde a operação acontece.</h2>
+            <p>O IndFlow leva informações de máquina, produção e parada para a equipe acompanhar a operação com dados visíveis e históricos.</p>
             <div class="metric-list">
                 <div><strong>RUN / STOP</strong><span>Status da máquina</span></div>
                 <div><strong>Produção</strong><span>Contagem e histórico</span></div>
@@ -184,27 +365,34 @@
             </div>
             <a class="button" href="{{ url_for('indflow') }}">Conhecer IndFlow</a>
         </div>
-        <div class="production-panel">
-            <div class="production-head">
-                <div><small>Máquina</small><strong>LINHA 01</strong></div>
-                <span class="live-pill">RUN</span>
-            </div>
-            <div class="production-value">
-                <small>Produção do turno</small>
-                <strong>8.420</strong>
-                <span>peças</span>
-            </div>
-            <div class="timeline">
-                <span class="run" style="width: 24%"></span>
-                <span class="stop" style="width: 8%"></span>
-                <span class="run" style="width: 38%"></span>
-                <span class="stop" style="width: 5%"></span>
-                <span class="run" style="width: 25%"></span>
-            </div>
-            <div class="production-foot">
-                <div><small>Disponibilidade</small><strong>91%</strong></div>
-                <div><small>Paradas</small><strong>04</strong></div>
-                <div><small>Meta</small><strong>93%</strong></div>
+
+        <div class="validation-stage" aria-label="Profissional validando o IndFlow em ambiente industrial">
+            <img src="https://images.unsplash.com/photo-1781559818983-4180d744416a?auto=format&amp;fit=crop&amp;fm=jpg&amp;q=70&amp;w=1600" alt="Profissional com tablet em ambiente de operação e logística industrial">
+            <span class="validation-badge">Validação no chão de fábrica</span>
+            <div class="system-screen" aria-label="Tela ilustrativa do IndFlow">
+                <div class="system-screen-top">
+                    <strong>IndFlow · Produção</strong>
+                    <span>Monitoramento industrial</span>
+                </div>
+                <div class="indflow-ui">
+                    <div class="indflow-mini-grid">
+                        <div class="indflow-mini"><small>Máquina</small><strong>LINHA 01</strong></div>
+                        <div class="indflow-mini"><small>Status</small><strong class="indflow-run">RUN</strong></div>
+                        <div class="indflow-mini"><small>Produção do turno</small><strong>8.420</strong></div>
+                    </div>
+                    <div class="indflow-timeline" aria-label="Linha do tempo de produção e paradas">
+                        <span class="run" style="width:24%"></span>
+                        <span class="stop" style="width:7%"></span>
+                        <span class="run" style="width:36%"></span>
+                        <span class="stop" style="width:6%"></span>
+                        <span class="run" style="width:27%"></span>
+                    </div>
+                    <div class="indflow-caption">
+                        <span>Disponibilidade 91%</span>
+                        <span>4 paradas</span>
+                        <span>Meta 93%</span>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -213,16 +401,40 @@
 <section class="section nr12-showcase">
     <div class="container nr12-grid">
         <div>
-            <span class="eyebrow">Segurança de máquinas</span>
-            <h2>Soluções e adequações relacionadas à NR-12.</h2>
-            <p>Da identificação da necessidade à implantação de proteções e sistemas de segurança, com foco em soluções aplicáveis à realidade do equipamento e da operação.</p>
+            <span class="eyebrow">NR-12 · Elétrica + Mecânica</span>
+            <h2>Adequação de máquinas com atuação mecânica e elétrica.</h2>
+            <p>A NettSan executa soluções de segurança olhando o equipamento como um conjunto: proteção física, estrutura mecânica, sensores, intertravamentos, painéis e circuitos de segurança dentro do escopo definido para cada máquina.</p>
+
+            <div class="nr12-dual">
+                <article class="nr12-discipline">
+                    <span>Mecânica</span>
+                    <h3>Proteções e estruturas</h3>
+                    <ul>
+                        <li>Proteções físicas e grades.</li>
+                        <li>Enclausuramentos e portas.</li>
+                        <li>Estruturas e suportes sob medida.</li>
+                        <li>Adequações mecânicas aplicadas à zona de risco.</li>
+                    </ul>
+                </article>
+                <article class="nr12-discipline">
+                    <span>Elétrica</span>
+                    <h3>Comando e segurança</h3>
+                    <ul>
+                        <li>Intertravamentos e sensores de segurança.</li>
+                        <li>Barreiras optoeletrônicas quando aplicável.</li>
+                        <li>Painéis e circuitos relacionados à segurança.</li>
+                        <li>Integração elétrica da solução ao equipamento.</li>
+                    </ul>
+                </article>
+            </div>
+
             <a class="button" href="{{ url_for('nr12') }}">Solicitar avaliação</a>
         </div>
-        <div class="nr12-services">
-            <div><span>01</span><strong>Proteções mecânicas</strong></div>
-            <div><span>02</span><strong>Enclausuramentos</strong></div>
-            <div><span>03</span><strong>Portas e acessos intertravados</strong></div>
-            <div><span>04</span><strong>Sistemas e dispositivos de segurança</strong></div>
+        <div class="nr12-services nr12-services-wide">
+            <div><span>01</span><strong>Proteções mecânicas e enclausuramentos</strong></div>
+            <div><span>02</span><strong>Portas, acessos e intertravamentos</strong></div>
+            <div><span>03</span><strong>Barreiras, sensores e dispositivos de segurança</strong></div>
+            <div><span>04</span><strong>Painéis, comandos e adequações elétricas</strong></div>
         </div>
     </div>
 </section>
