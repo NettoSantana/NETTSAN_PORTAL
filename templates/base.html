@@ -1,14 +1,14 @@
 <!-- CAMINHO COMPLETO: C:\Users\vlula\OneDrive\Área de Trabalho\Projetos Backup\NETTSAN_PORTAL\templates\base.html -->
-<!-- DATA E HORA DO ULTIMO RECODE: 2026-08-11 18:35 -03:00 -->
-<!-- MOTIVO DA ALTERACAO: Substituir a marca recriada em HTML pela logo oficial da NettSan e pelo simbolo N oficial no mobile e rodape. -->
+<!-- DATA E HORA DO ULTIMO RECODE: 2026-09-10 19:15 -03:00 -->
+<!-- MOTIVO DA ALTERACAO: Ajustar a navegacao principal para organizar as solucoes por abas e incluir Automacao Residencial. -->
 <!doctype html>
 <html lang="pt-BR">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#184178">
-    <meta name="description" content="{% block meta_description %}Soluções NettSan em gestão empresarial, monitoramento industrial e segurança de máquinas.{% endblock %}">
-    <title>{% block title %}NettSan Technology{% endblock %}</title>
+    <meta name="description" content="{% block meta_description %}Soluções NETTSAN em segurança de máquinas, monitoramento industrial, gestão empresarial e automação residencial.{% endblock %}">
+    <title>{% block title %}NETTSAN{% endblock %}</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/site.css') }}">
     <script defer src="{{ url_for('static', filename='js/site.js') }}"></script>
 </head>
@@ -17,8 +17,8 @@
 
     <header class="site-header" data-site-header>
         <div class="container header-inner">
-            <a class="brand" href="{{ url_for('home') }}" aria-label="NettSan Technology - Início">
-                <img class="brand-logo brand-logo-full" src="{{ url_for('static', filename='img/brand/nettsan-logo.png') }}" alt="NettSan Technology">
+            <a class="brand" href="{{ url_for('home') }}" aria-label="NETTSAN - Início">
+                <img class="brand-logo brand-logo-full" src="{{ url_for('static', filename='img/brand/nettsan-logo.png') }}" alt="NETTSAN">
                 <img class="brand-logo brand-logo-mark" src="{{ url_for('static', filename='img/brand/nettsan-n.png') }}" alt="" aria-hidden="true">
             </a>
 
@@ -31,14 +31,15 @@
 
             <nav class="main-nav" id="menu-principal" aria-label="Navegação principal" data-main-nav>
                 <a href="{{ url_for('home') }}" {% if request.endpoint == 'home' %}aria-current="page"{% endif %}>Início</a>
-                <a href="{{ url_for('gestflow') }}" {% if request.endpoint == 'gestflow' %}aria-current="page"{% endif %}>GestFlow</a>
+                <a href="{{ url_for('nr12') }}" {% if request.endpoint == 'nr12' %}aria-current="page"{% endif %}>NR12</a>
                 <a href="{{ url_for('indflow') }}" {% if request.endpoint == 'indflow' %}aria-current="page"{% endif %}>IndFlow</a>
-                <a href="{{ url_for('nr12') }}" {% if request.endpoint == 'nr12' %}aria-current="page"{% endif %}>NR-12</a>
-                <a href="{{ url_for('cases') }}" {% if request.endpoint == 'cases' %}aria-current="page"{% endif %}>Cases</a>
+                <a href="{{ url_for('gestflow') }}" {% if request.endpoint == 'gestflow' %}aria-current="page"{% endif %}>GestFlow</a>
+                <a href="{{ url_for('automacao_residencial') }}" {% if request.endpoint == 'automacao_residencial' %}aria-current="page"{% endif %}>Automação Residencial</a>
                 <a href="{{ url_for('sobre') }}" {% if request.endpoint == 'sobre' %}aria-current="page"{% endif %}>Sobre</a>
+                <a href="{{ url_for('contato') }}" {% if request.endpoint == 'contato' %}aria-current="page"{% endif %}>Contato</a>
             </nav>
 
-            <a class="button button-small header-cta" href="{{ url_for('contato') }}">Falar com a NettSan</a>
+            <a class="button button-small header-cta" href="{{ url_for('contato') }}">Fale conosco</a>
         </div>
     </header>
 
@@ -49,22 +50,22 @@
     <footer class="site-footer">
         <div class="container footer-grid">
             <div>
-                <a class="brand brand-footer" href="{{ url_for('home') }}" aria-label="NettSan Technology - Início">
+                <a class="brand brand-footer" href="{{ url_for('home') }}" aria-label="NETTSAN - Início">
                     <img class="brand-logo brand-logo-mark brand-logo-footer" src="{{ url_for('static', filename='img/brand/nettsan-n.png') }}" alt="" aria-hidden="true">
                 </a>
-                <p>Tecnologia e engenharia para gestão, produção e segurança industrial.</p>
+                <p>Tecnologia e engenharia para produção, gestão, segurança de máquinas e automação residencial.</p>
             </div>
 
             <div>
                 <h2>Soluções</h2>
-                <a href="{{ url_for('gestflow') }}">GestFlow</a>
+                <a href="{{ url_for('nr12') }}">NR12</a>
                 <a href="{{ url_for('indflow') }}">IndFlow</a>
-                <a href="{{ url_for('nr12') }}">Segurança de máquinas / NR-12</a>
+                <a href="{{ url_for('gestflow') }}">GestFlow</a>
+                <a href="{{ url_for('automacao_residencial') }}">Automação Residencial</a>
             </div>
 
             <div>
-                <h2>Empresa</h2>
-                <a href="{{ url_for('cases') }}">Cases</a>
+                <h2>Institucional</h2>
                 <a href="{{ url_for('sobre') }}">Sobre</a>
                 <a href="{{ url_for('contato') }}">Contato</a>
             </div>
@@ -76,8 +77,8 @@
             </div>
         </div>
         <div class="container footer-bottom">
-            <span>© <span data-current-year></span> NettSan Technology.</span>
-            <span>Gestão · Produção · Segurança</span>
+            <span>© <span data-current-year></span> NETTSAN.</span>
+            <span>NR12 · IndFlow · GestFlow · Automação Residencial</span>
         </div>
     </footer>
 </body>

@@ -1,23 +1,29 @@
 <!-- CAMINHO COMPLETO: C:\Users\vlula\OneDrive\Área de Trabalho\Projetos Backup\NETTSAN_PORTAL\templates\nr12.html -->
-<!-- DATA E HORA DO ULTIMO RECODE: 2026-08-10 11:10 -03:00 -->
-<!-- MOTIVO DA ALTERACAO: Criar a pagina comercial inicial de seguranca de maquinas e servicos relacionados a NR-12. -->
+<!-- DATA E HORA DO ULTIMO RECODE: 2026-09-10 19:15 -03:00 -->
+<!-- MOTIVO DA ALTERACAO: Incorporar os cases de NR12 na propria aba e eliminar a necessidade de uma pagina separada de cases. -->
 {% extends "base.html" %}
 
-{% block title %}NR-12 e Segurança de Máquinas | NettSan Technology{% endblock %}
-{% block meta_description %}Soluções NettSan para segurança de máquinas: proteções, enclausuramentos, intertravamentos e adequações relacionadas à NR-12.{% endblock %}
+{% block title %}NR12 | Segurança de máquinas da NETTSAN{% endblock %}
+{% block meta_description %}Conheça a atuação da NETTSAN em segurança de máquinas e NR12, com adequações mecânicas, elétricas e cases reais.{% endblock %}
 
 {% block content %}
 <section class="page-hero section">
     <div class="container page-hero-grid">
         <div>
-            <span class="eyebrow">Segurança de máquinas / NR-12</span>
+            <span class="eyebrow">NR12</span>
             <h1>Segurança aplicada à realidade da sua máquina.</h1>
-            <p>Desenvolvemos e implantamos soluções de proteção e segurança considerando o equipamento, o processo e a necessidade operacional.</p>
-            <a class="button" href="{{ url_for('contato') }}">Solicitar avaliação</a>
+            <p>A aba de NR12 agora concentra o serviço e os próprios cases, com exemplos reais de proteções, adequações e integração de segurança.</p>
+            <div class="chip-row">
+                <span>Proteções mecânicas</span>
+                <span>Adequações elétricas</span>
+                <span>Intertravamentos</span>
+                <span>Enclausuramentos</span>
+                <span>Projetos sob medida</span>
+            </div>
         </div>
         <div class="page-visual page-visual-nr12">
-            <span class="visual-tag">Segurança industrial</span>
-            <strong>Proteções · Enclausuramentos · Intertravamentos</strong>
+            <span class="visual-tag">Atuação mecânica + elétrica</span>
+            <strong>Proteção física, comando de segurança e adequações dentro do escopo da máquina.</strong>
         </div>
     </div>
 </section>
@@ -25,23 +31,102 @@
 <section class="section">
     <div class="container">
         <div class="section-heading">
-            <span class="eyebrow">Serviços</span>
-            <h2>Soluções para reduzir exposição a riscos em máquinas e equipamentos.</h2>
-            <p>O escopo técnico e as responsabilidades aplicáveis são definidos conforme a necessidade de cada projeto.</p>
+            <span class="eyebrow">Como atuamos</span>
+            <h2>Projetos para reduzir exposição a risco.</h2>
+            <p>A NETTSAN atua em soluções mecânicas e elétricas para tornar o acesso às zonas de risco mais controlado e a operação mais protegida.</p>
         </div>
         <div class="feature-grid">
-            <article><h3>Proteções mecânicas</h3><p>Barreiras e proteções projetadas para restringir o acesso a zonas de risco.</p></article>
-            <article><h3>Enclausuramentos</h3><p>Soluções físicas para controlar o acesso e proteger áreas do equipamento.</p></article>
-            <article><h3>Intertravamentos</h3><p>Portas e acessos associados a sistemas de segurança conforme o projeto definido.</p></article>
-            <article><h3>Adequações</h3><p>Implantação de melhorias elétricas e mecânicas dentro do escopo estabelecido para a máquina.</p></article>
+            <article>
+                <h3>Proteções mecânicas</h3>
+                <p>Barreiras, estruturas e proteções projetadas para restringir o acesso às zonas de risco.</p>
+            </article>
+            <article>
+                <h3>Enclausuramentos</h3>
+                <p>Soluções físicas para controlar o acesso e proteger áreas críticas do equipamento.</p>
+            </article>
+            <article>
+                <h3>Intertravamentos</h3>
+                <p>Portas, acessos e sistemas de segurança associados à lógica definida no projeto.</p>
+            </article>
+            <article>
+                <h3>Adequações elétricas</h3>
+                <p>Comando, sinalização, integração e ajustes elétricos dentro do escopo de segurança da máquina.</p>
+            </article>
+        </div>
+    </div>
+</section>
+
+<section class="section section-soft" id="cases">
+    <div class="container">
+        <div class="section-heading">
+            <span class="eyebrow">Cases de NR12</span>
+            <h2>Os cases ficam dentro da própria aba.</h2>
+            <p>As imagens abaixo mostram exemplos reais apresentados diretamente na página de NR12, sem depender de uma página separada de cases.</p>
+        </div>
+
+        <div class="nr12-case-stack">
+            <article class="nr12-case-card">
+                <div class="nr12-case-copy">
+                    <span class="solution-number">Case 01</span>
+                    <h3>Duas serras-fita industriais</h3>
+                    <p>Projeto com foco em reduzir a exposição às zonas de risco, combinando proteção física e integração de segurança no conjunto.</p>
+                    <ul class="bullet-list">
+                        <li>Levantamento das condições reais do equipamento</li>
+                        <li>Desenvolvimento de proteções específicas</li>
+                        <li>Integração elétrica relacionada ao sistema de segurança</li>
+                    </ul>
+                </div>
+                <div class="photo-pair">
+                    <figure class="case-photo">
+                        <img src="{{ url_for('static', filename='img/nr12/01-serra-fita-industrial-antes-da-instala-o-das-novas-prote-es-.webp') }}" alt="Serra-fita industrial antes da instalação das novas proteções de segurança">
+                        <figcaption>Antes</figcaption>
+                    </figure>
+                    <figure class="case-photo">
+                        <img src="{{ url_for('static', filename='img/nr12/03-serra-fita-01-ap-s-instala-o-da-prote-o-f-sica-amarela.webp') }}" alt="Serra-fita após instalação da proteção física amarela">
+                        <figcaption>Depois</figcaption>
+                    </figure>
+                </div>
+            </article>
+
+            <article class="nr12-case-card">
+                <div class="nr12-case-copy">
+                    <span class="solution-number">Case 02</span>
+                    <h3>Prensa pneumática</h3>
+                    <p>Solução voltada a controlar a área de operação da prensa, com proteção física e segurança ativa integradas ao conjunto.</p>
+                    <ul class="bullet-list">
+                        <li>Levantamento da região de operação</li>
+                        <li>Conceito e fabricação da proteção</li>
+                        <li>Implantação e ajustes dentro do escopo do projeto</li>
+                    </ul>
+                </div>
+                <div class="photo-pair">
+                    <figure class="case-photo">
+                        <img src="{{ url_for('static', filename='img/nr12/06-prensa-pneum-tica-antes-da-adequa-o-de-seguran-a.webp') }}" alt="Prensa pneumática antes da adequação de segurança">
+                        <figcaption>Antes</figcaption>
+                    </figure>
+                    <figure class="case-photo">
+                        <img src="{{ url_for('static', filename='img/nr12/09-prensa-pneum-tica-com-solu-o-de-seguran-a-instalada.webp') }}" alt="Prensa pneumática com solução de segurança instalada">
+                        <figcaption>Depois</figcaption>
+                    </figure>
+                </div>
+            </article>
+        </div>
+
+        <div class="contact-note">
+            <strong>Observação importante:</strong>
+            <p>Os cases representam serviços executados dentro do escopo contratado e demonstram a solução aplicada ao equipamento apresentado.</p>
         </div>
     </div>
 </section>
 
 <section class="section final-cta">
     <div class="container final-cta-inner">
-        <div><span class="eyebrow eyebrow-light">Segurança de máquinas</span><h2>Existe uma máquina que precisa de avaliação?</h2><p>Conte qual equipamento ou necessidade sua empresa precisa tratar.</p></div>
-        <a class="button button-white" href="{{ url_for('contato') }}">Solicitar avaliação</a>
+        <div>
+            <span class="eyebrow eyebrow-light">Segurança de máquinas</span>
+            <h2>Tem uma máquina que precisa de avaliação?</h2>
+            <p>Apresente o equipamento e a necessidade para avaliarmos a melhor solução.</p>
+        </div>
+        <a class="button button-white" href="{{ url_for('contato') }}">Falar sobre NR12</a>
     </div>
 </section>
 {% endblock %}

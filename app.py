@@ -1,8 +1,8 @@
 # CAMINHO COMPLETO: C:\Users\vlula\OneDrive\Área de Trabalho\Projetos Backup\NETTSAN_PORTAL\app.py
-# DATA E HORA DO ULTIMO RECODE: 2026-08-10 11:10 -03:00
-# MOTIVO DA ALTERACAO: Criar a aplicacao Flask inicial do portal comercial da NettSan e disponibilizar as paginas publicas principais.
+# DATA E HORA DO ULTIMO RECODE: 2026-09-10 19:15 -03:00
+# MOTIVO DA ALTERACAO: Reorganizar o portal por abas de solucao, criar a pagina de Automacao Residencial e redirecionar a rota antiga de cases para NR-12.
 
-from flask import Flask, render_template
+from flask import Flask, redirect, render_template, url_for
 
 app = Flask(__name__)
 
@@ -12,9 +12,9 @@ def home():
     return render_template("index.html")
 
 
-@app.get("/gestflow")
-def gestflow():
-    return render_template("gestflow.html")
+@app.get("/nr12")
+def nr12():
+    return render_template("nr12.html")
 
 
 @app.get("/indflow")
@@ -22,14 +22,19 @@ def indflow():
     return render_template("indflow.html")
 
 
-@app.get("/nr12")
-def nr12():
-    return render_template("nr12.html")
+@app.get("/gestflow")
+def gestflow():
+    return render_template("gestflow.html")
+
+
+@app.get("/automacao-residencial")
+def automacao_residencial():
+    return render_template("automacao_residencial.html")
 
 
 @app.get("/cases")
 def cases():
-    return render_template("cases.html")
+    return redirect(f"{url_for('nr12')}#cases", code=301)
 
 
 @app.get("/sobre")

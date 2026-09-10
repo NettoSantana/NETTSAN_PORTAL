@@ -1,0 +1,149 @@
+<!-- CAMINHO COMPLETO: C:\Users\vlula\OneDrive\Área de Trabalho\Projetos Backup\NETTSAN_PORTAL\templates\automacao_residencial.html -->
+<!-- DATA E HORA DO ULTIMO RECODE: 2026-09-10 19:15 -03:00 -->
+<!-- MOTIVO DA ALTERACAO: Criar a nova aba de Automacao Residencial com campos de atuacao, tecnologias e logos de linhas parceiras. -->
+{% extends "base.html" %}
+
+{% block title %}Automação Residencial | NETTSAN{% endblock %}
+{% block meta_description %}Conheça a Automação Residencial da NETTSAN com iluminação inteligente, LED, tomadas inteligentes, cortinas automáticas, Alexa, Google, Zigbee e Wi-Fi.{% endblock %}
+
+{% block content %}
+<section class="page-hero section">
+    <div class="container page-hero-grid">
+        <div>
+            <span class="eyebrow">Automação Residencial</span>
+            <h1>Casa inteligente com conforto, praticidade e integração.</h1>
+            <p>A NETTSAN trabalha com iluminação inteligente, LED, tomadas inteligentes, cortinas automáticas e integração com Alexa e Google, utilizando tecnologias Zigbee e Wi-Fi.</p>
+            <div class="chip-row">
+                <span>Iluminação</span>
+                <span>LED</span>
+                <span>Tomadas inteligentes</span>
+                <span>Cortinas automáticas</span>
+                <span>Alexa / Google</span>
+                <span>Zigbee / Wi-Fi</span>
+            </div>
+            <a class="button" href="{{ url_for('contato') }}">Solicitar orçamento</a>
+        </div>
+        <div class="hero-preview">
+            <img src="{{ url_for('static', filename='img/residencial/hero.jpg') }}" alt="Ambiente residencial com controle por smartphone, caixa de som inteligente e tomada inteligente">
+        </div>
+    </div>
+</section>
+
+<section class="section" id="campos">
+    <div class="container">
+        <div class="section-heading">
+            <span class="eyebrow">O que trabalhamos</span>
+            <h2>Campos de atuação em automação residencial.</h2>
+            <p>Usamos exemplos visuais para mostrar como as soluções podem ser aplicadas em ambientes residenciais.</p>
+        </div>
+        <div class="media-grid">
+            <article class="media-card">
+                <img src="{{ url_for('static', filename='img/residencial/iluminacao.jpg') }}" alt="Exemplo de iluminação inteligente em ambiente residencial">
+                <div class="media-card-body">
+                    <h3>Iluminação inteligente</h3>
+                    <p>Controle da iluminação pelo app, por voz ou por automação programada.</p>
+                </div>
+            </article>
+            <article class="media-card">
+                <img src="{{ url_for('static', filename='img/residencial/led.jpg') }}" alt="Exemplo de LED aplicado em ambiente interno">
+                <div class="media-card-body">
+                    <h3>LED e ambientes</h3>
+                    <p>Soluções em LED para ambientes mais modernos, econômicos e acolhedores.</p>
+                </div>
+            </article>
+            <article class="media-card">
+                <img src="{{ url_for('static', filename='img/residencial/tomadas.jpg') }}" alt="Exemplo de tomada inteligente instalada na parede">
+                <div class="media-card-body">
+                    <h3>Tomadas inteligentes</h3>
+                    <p>Ligue e desligue equipamentos de onde estiver, com mais praticidade e segurança.</p>
+                </div>
+            </article>
+            <article class="media-card">
+                <img src="{{ url_for('static', filename='img/residencial/cortinas.jpg') }}" alt="Exemplo de cortinas automáticas em ambiente residencial">
+                <div class="media-card-body">
+                    <h3>Cortinas automáticas</h3>
+                    <p>Acionamento por aplicativo, voz, horário ou integração com cenas do ambiente.</p>
+                </div>
+            </article>
+            <article class="media-card">
+                <img src="{{ url_for('static', filename='img/residencial/alexa-google.jpg') }}" alt="Exemplo de integração com Alexa e Google Assistente">
+                <div class="media-card-body">
+                    <h3>Integração Alexa e Google</h3>
+                    <p>Controle por voz com Amazon Alexa e Google Assistente para centralizar a casa inteligente.</p>
+                </div>
+            </article>
+            <article class="media-card">
+                <img src="{{ url_for('static', filename='img/residencial/zigbee-wifi.jpg') }}" alt="Exemplo visual de conectividade Zigbee e Wi-Fi">
+                <div class="media-card-body">
+                    <h3>Zigbee e Wi-Fi</h3>
+                    <p>Tecnologias confiáveis para projetos simples ou mais completos, conforme a necessidade da residência.</p>
+                </div>
+            </article>
+        </div>
+    </div>
+</section>
+
+<section class="section section-soft">
+    <div class="container">
+        <div class="section-heading">
+            <span class="eyebrow">Linhas e tecnologias</span>
+            <h2>Marcas e ecossistemas com que trabalhamos.</h2>
+            <p>A NETTSAN atua com linhas parceiras e dispositivos compatíveis com os principais cenários de automação residencial.</p>
+        </div>
+        <div class="logo-grid">
+            <article class="logo-tile">
+                <img src="{{ url_for('static', filename='img/residencial/weg.jpg') }}" alt="Logo WEG">
+            </article>
+            <article class="logo-tile">
+                <img src="{{ url_for('static', filename='img/residencial/inova.jpg') }}" alt="Logo Inova">
+            </article>
+            <article class="logo-tile">
+                <img src="{{ url_for('static', filename='img/residencial/avant.jpg') }}" alt="Logo Avant">
+            </article>
+            <article class="logo-tile">
+                <img src="{{ url_for('static', filename='img/residencial/tuya.jpg') }}" alt="Logo Tuya">
+            </article>
+            <article class="logo-tile">
+                <img src="{{ url_for('static', filename='img/residencial/smart-life.jpg') }}" alt="Logo Smart Life">
+            </article>
+        </div>
+        <div class="stat-grid stat-grid-spaced">
+            <article class="stat-card"><small>Marcas</small><strong>WEG</strong><span>Soluções elétricas e componentes para integração.</span></article>
+            <article class="stat-card"><small>Marcas</small><strong>Inova</strong><span>Soluções inteligentes aplicadas ao ambiente residencial.</span></article>
+            <article class="stat-card"><small>Marcas</small><strong>Avant</strong><span>Linhas de iluminação e LED para diversos ambientes.</span></article>
+            <article class="stat-card"><small>Ecossistema</small><strong>Tuya / Smart Life</strong><span>Plataforma IoT e integração de dispositivos compatíveis.</span></article>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container showcase-grid">
+        <div class="showcase-copy">
+            <span class="eyebrow">Como entregamos</span>
+            <h2>Projeto, instalação, configuração e suporte.</h2>
+            <p>Nosso foco não é apenas vender um dispositivo, mas estruturar a solução certa para o ambiente do cliente.</p>
+            <div class="metric-list">
+                <div><strong>Projeto</strong><span>Entendimento do ambiente, da rotina e do objetivo da automação.</span></div>
+                <div><strong>Instalação</strong><span>Aplicação dos equipamentos com lógica adequada ao uso real.</span></div>
+                <div><strong>Integração</strong><span>Conexão com app, voz, cenas, rotinas e dispositivos compatíveis.</span></div>
+                <div><strong>Expansão</strong><span>Base preparada para crescer com a necessidade do cliente.</span></div>
+            </div>
+            <a class="button" href="{{ url_for('contato') }}">Falar com a NETTSAN</a>
+        </div>
+        <div class="hero-preview hero-preview-tall">
+            <img src="{{ url_for('static', filename='img/residencial/cta.jpg') }}" alt="Exemplo visual de ambiente residencial automatizado">
+        </div>
+    </div>
+</section>
+
+<section class="section final-cta">
+    <div class="container final-cta-inner">
+        <div>
+            <span class="eyebrow eyebrow-light">Automação Residencial</span>
+            <h2>Pronto para ter uma casa mais inteligente?</h2>
+            <p>Fale com a equipe da NETTSAN e receba um projeto personalizado para o seu ambiente.</p>
+        </div>
+        <a class="button button-white" href="{{ url_for('contato') }}">Solicitar orçamento</a>
+    </div>
+</section>
+{% endblock %}

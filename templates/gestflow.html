@@ -1,10 +1,10 @@
 <!-- CAMINHO COMPLETO: C:\Users\vlula\OneDrive\Área de Trabalho\Projetos Backup\NETTSAN_PORTAL\templates\gestflow.html -->
-<!-- DATA E HORA DO ULTIMO RECODE: 2026-08-10 11:10 -03:00 -->
-<!-- MOTIVO DA ALTERACAO: Criar a pagina comercial inicial do GestFlow dentro do portal NettSan. -->
+<!-- DATA E HORA DO ULTIMO RECODE: 2026-09-10 19:15 -03:00 -->
+<!-- MOTIVO DA ALTERACAO: Colocar os cases e aplicacoes do GestFlow dentro da propria aba, mantendo a organizacao por solucao. -->
 {% extends "base.html" %}
 
-{% block title %}GestFlow | Gestão Empresarial sem Complicação{% endblock %}
-{% block meta_description %}Conheça o GestFlow, sistema da NettSan para centralizar clientes, vendas, estoque, financeiro, ordens de serviço e atividades.{% endblock %}
+{% block title %}GestFlow | Gestão empresarial da NETTSAN{% endblock %}
+{% block meta_description %}Conheça o GestFlow, sistema da NETTSAN para organizar clientes, vendas, ordens de serviço, estoque e financeiro.{% endblock %}
 
 {% block content %}
 <section class="page-hero section">
@@ -12,12 +12,26 @@
         <div>
             <span class="eyebrow">GestFlow</span>
             <h1>Gestão empresarial sem complicação.</h1>
-            <p>Centralize processos comerciais e operacionais em um único sistema e reduza a dependência de planilhas, papel e controles espalhados.</p>
-            <a class="button" href="{{ url_for('contato') }}">Solicitar demonstração</a>
+            <p>O GestFlow concentra os fluxos da empresa em uma solução única, com exemplos de uso e aplicações mostrados nesta própria aba.</p>
+            <div class="chip-row">
+                <span>Clientes</span>
+                <span>Vendas</span>
+                <span>OS</span>
+                <span>Estoque</span>
+                <span>Financeiro</span>
+                <span>Atividades</span>
+            </div>
         </div>
-        <div class="page-visual page-visual-gestflow">
-            <span class="visual-tag">Gestão em um só lugar</span>
-            <strong>Clientes · Vendas · Estoque · Financeiro · OS</strong>
+        <div class="browser-mockup">
+            <div class="browser-top"><span></span><span></span><span></span></div>
+            <div class="browser-body">
+                <div class="mock-sidebar"><b>G</b><i></i><i></i><i></i><i></i></div>
+                <div class="mock-main">
+                    <div class="mock-title"></div>
+                    <div class="mock-kpis"><span></span><span></span><span></span></div>
+                    <div class="mock-table"><i></i><i></i><i></i><i></i><i></i></div>
+                </div>
+            </div>
         </div>
     </div>
 </section>
@@ -25,22 +39,105 @@
 <section class="section">
     <div class="container">
         <div class="section-heading">
-            <span class="eyebrow">Visão inicial</span>
-            <h2>Organize a rotina da empresa em uma única operação.</h2>
+            <span class="eyebrow">O que organizamos</span>
+            <h2>Uma plataforma para reduzir controles paralelos.</h2>
+            <p>O objetivo do GestFlow é simplificar a rotina administrativa e operacional, mantendo as informações integradas.</p>
         </div>
         <div class="feature-grid">
-            <article><h3>Clientes e relacionamento</h3><p>Informações centralizadas para acompanhar a relação comercial com cada cliente.</p></article>
-            <article><h3>Vendas e serviços</h3><p>Controle de vendas, ordens de serviço e atividades em um fluxo mais organizado.</p></article>
-            <article><h3>Estoque</h3><p>Acompanhe produtos, movimentações e necessidades da operação.</p></article>
-            <article><h3>Financeiro</h3><p>Tenha mais clareza sobre valores a receber, a pagar e movimentações do negócio.</p></article>
+            <article>
+                <h3>Clientes e relacionamento</h3>
+                <p>Cadastro centralizado, histórico e informações úteis para acompanhar a relação comercial.</p>
+            </article>
+            <article>
+                <h3>Orçamentos e vendas</h3>
+                <p>Fluxos comerciais mais organizados, com vínculo entre orçamento, venda e operação.</p>
+            </article>
+            <article>
+                <h3>Ordens de serviço</h3>
+                <p>Controle das OS com vínculo ao atendimento, execução e acompanhamento do serviço.</p>
+            </article>
+            <article>
+                <h3>Financeiro e estoque</h3>
+                <p>Mais clareza sobre a movimentação financeira e os itens que sustentam a operação.</p>
+            </article>
+        </div>
+    </div>
+</section>
+
+<section class="section section-soft" id="cases">
+    <div class="container">
+        <div class="section-heading">
+            <span class="eyebrow">Aplicações do GestFlow</span>
+            <h2>Os exemplos ficam na própria aba do sistema.</h2>
+            <p>Em vez de uma página separada de cases, esta área resume onde o GestFlow atua melhor dentro da rotina da empresa.</p>
+        </div>
+        <div class="mini-case-grid">
+            <article class="mini-case-card">
+                <span class="solution-number">01</span>
+                <h3>Comercial e propostas</h3>
+                <p>Fluxos de orçamentos, geração de escopo e transição para venda e OS em uma mesma linha de trabalho.</p>
+                <ul class="bullet-list">
+                    <li>Menos retrabalho na passagem comercial</li>
+                    <li>Documentos e negociações mais organizados</li>
+                    <li>Visão da jornada do cliente</li>
+                </ul>
+            </article>
+            <article class="mini-case-card">
+                <span class="solution-number">02</span>
+                <h3>Serviços e execução</h3>
+                <p>Aplicação direta para empresas que precisam acompanhar ordens, equipes, atividades e o andamento da entrega.</p>
+                <ul class="bullet-list">
+                    <li>OS integrada com atendimento</li>
+                    <li>Acompanhamento da execução</li>
+                    <li>Mais controle sobre a operação</li>
+                </ul>
+            </article>
+            <article class="mini-case-card">
+                <span class="solution-number">03</span>
+                <h3>Financeiro e apoio à gestão</h3>
+                <p>Entradas, saídas, recebimentos, custos e indicadores administrativos reunidos em um só ambiente.</p>
+                <ul class="bullet-list">
+                    <li>Menos planilhas paralelas</li>
+                    <li>Fluxo financeiro mais claro</li>
+                    <li>Base melhor para tomada de decisão</li>
+                </ul>
+            </article>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container showcase-grid">
+        <div class="showcase-copy">
+            <span class="eyebrow">Por que centralizar</span>
+            <h2>Quando a informação fica espalhada, a operação perde força.</h2>
+            <p>O GestFlow ajuda a reunir o que normalmente fica distribuído em mensagens, planilhas, anotações e controles desconectados.</p>
+            <div class="metric-list">
+                <div><strong>Centralização</strong><span>Um lugar único para acompanhar processos e dados essenciais.</span></div>
+                <div><strong>Rastreabilidade</strong><span>Mais facilidade para entender o histórico de um atendimento ou negociação.</span></div>
+                <div><strong>Padronização</strong><span>Fluxos repetíveis e menos dependência de controles improvisados.</span></div>
+                <div><strong>Escalabilidade</strong><span>Base melhor para crescimento sem perder organização.</span></div>
+            </div>
+            <a class="button" href="{{ url_for('contato') }}">Solicitar demonstração</a>
+        </div>
+
+        <div class="stat-grid">
+            <article class="stat-card"><small>Módulos</small><strong>Comercial</strong><span>Orçamentos, vendas e relacionamento.</span></article>
+            <article class="stat-card"><small>Módulos</small><strong>OS</strong><span>Execução, serviços e acompanhamento.</span></article>
+            <article class="stat-card"><small>Módulos</small><strong>Financeiro</strong><span>Receber, pagar e visão da gestão.</span></article>
+            <article class="stat-card"><small>Módulos</small><strong>Estoque</strong><span>Produtos, itens e apoio à operação.</span></article>
         </div>
     </div>
 </section>
 
 <section class="section final-cta">
     <div class="container final-cta-inner">
-        <div><span class="eyebrow eyebrow-light">GestFlow</span><h2>Quer ver o sistema funcionando?</h2><p>Solicite uma demonstração e conheça o fluxo na prática.</p></div>
-        <a class="button button-white" href="{{ url_for('contato') }}">Solicitar demonstração</a>
+        <div>
+            <span class="eyebrow eyebrow-light">GestFlow</span>
+            <h2>Quer ver o sistema funcionando na prática?</h2>
+            <p>Solicite uma demonstração e veja como o GestFlow pode organizar a sua rotina.</p>
+        </div>
+        <a class="button button-white" href="{{ url_for('contato') }}">Falar sobre GestFlow</a>
     </div>
 </section>
 {% endblock %}
