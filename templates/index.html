@@ -1,6 +1,6 @@
 <!-- CAMINHO COMPLETO: C:\Users\vlula\OneDrive\Área de Trabalho\Projetos Backup\NETTSAN_PORTAL\templates\index.html -->
-<!-- DATA E HORA DO ULTIMO RECODE: 2026-09-10 19:15 -03:00 -->
-<!-- MOTIVO DA ALTERACAO: Reorganizar a home para destacar as quatro frentes da NETTSAN e retirar a pagina de cases como area separada. -->
+<!-- DATA E HORA DO ULTIMO RECODE: 2026-09-10 22:45 -03:00 -->
+<!-- MOTIVO DA ALTERACAO: Substituir textos internos sobre abas e estrutura do portal por linguagem comercial voltada ao cliente. -->
 {% extends "base.html" %}
 
 {% block title %}NETTSAN | NR12, IndFlow, GestFlow e Automação Residencial{% endblock %}
@@ -12,7 +12,7 @@
         <div class="hero-copy">
             <span class="eyebrow">Tecnologia + Engenharia</span>
             <h1>Soluções para <span>produção, gestão, segurança</span> e automação.</h1>
-            <p>A NETTSAN organiza o portal por solução. Cada aba mostra o que fazemos, como atuamos e os cases da própria área.</p>
+            <p>A NETTSAN reúne engenharia e tecnologia para tornar operações mais seguras, produtivas, organizadas e conectadas.</p>
             <div class="hero-actions">
                 <a class="button" href="#solucoes">Conhecer soluções</a>
                 <a class="button button-ghost" href="{{ url_for('contato') }}">Falar com a NETTSAN</a>
@@ -76,8 +76,8 @@
     <div class="container">
         <div class="section-heading">
             <span class="eyebrow">Soluções NETTSAN</span>
-            <h2>Agora cada solução tem sua própria aba.</h2>
-            <p>Fica mais fácil para o cliente entender o que a NETTSAN entrega em cada frente e visualizar exemplos da própria área.</p>
+            <h2>Soluções para diferentes necessidades, em um só parceiro.</h2>
+            <p>Da segurança de máquinas à gestão, do monitoramento industrial à casa inteligente, desenvolvemos soluções aplicadas à realidade de cada cliente.</p>
         </div>
 
         <div class="solution-grid">
@@ -88,7 +88,7 @@
                 <p>Adequações mecânicas e elétricas, proteções, enclausuramentos, intertravamentos e aplicações reais executadas.</p>
                 <ul>
                     <li>Atuação mecânica e elétrica</li>
-                    <li>Cases reais na própria aba</li>
+                    <li>Projetos e aplicações reais</li>
                     <li>Projetos sob medida</li>
                 </ul>
                 <a class="text-link" href="{{ url_for('nr12') }}">Ver NR12 →</a>
@@ -102,7 +102,7 @@
                 <ul>
                     <li>Produção em tempo real</li>
                     <li>Paradas e indicadores</li>
-                    <li>Aplicações industriais concentradas na mesma aba</li>
+                    <li>Integração com máquinas e sensores</li>
                 </ul>
                 <a class="text-link" href="{{ url_for('indflow') }}">Ver IndFlow →</a>
             </article>
@@ -115,7 +115,7 @@
                 <ul>
                     <li>Centralização da operação</li>
                     <li>Fluxos práticos de gestão</li>
-                    <li>Cases e aplicações na própria aba</li>
+                    <li>Aplicações para diferentes rotinas</li>
                 </ul>
                 <a class="text-link" href="{{ url_for('gestflow') }}">Ver GestFlow →</a>
             </article>
@@ -143,7 +143,7 @@
             <h2>Tecnologia aplicada à necessidade real.</h2>
         </div>
         <div class="split-copy">
-            <p>Cada frente do portal foi organizada para mostrar com clareza o problema que resolvemos, a forma de atuação e exemplos do que já aplicamos.</p>
+            <p>Entendemos a necessidade, definimos a solução adequada e entregamos tecnologia que faça sentido na operação ou no ambiente do cliente.</p>
             <div class="pillar-grid">
                 <div><strong>NR12</strong><span>Segurança aplicada à máquina e ao processo.</span></div>
                 <div><strong>IndFlow</strong><span>Dados simples para decisões melhores no chão de fábrica.</span></div>
@@ -158,8 +158,8 @@
     <div class="container showcase-grid">
         <div class="showcase-copy">
             <span class="eyebrow">IndFlow</span>
-            <h2>Aba própria para tudo que é industrial e de monitoramento.</h2>
-            <p>O IndFlow concentra monitoramento de produção, paradas, OEE, integração com sensores e aplicações industriais que antes poderiam ficar espalhadas.</p>
+            <h2>Monitoramento industrial para enxergar melhor a operação.</h2>
+            <p>O IndFlow acompanha produção, paradas, OEE e sinais de máquinas para transformar o chão de fábrica em informação útil para decisão.</p>
             <div class="chip-row">
                 <span>Produção em tempo real</span>
                 <span>RUN / STOP</span>
@@ -201,7 +201,7 @@
         <div class="showcase-copy">
             <span class="eyebrow">GestFlow</span>
             <h2>Fluxo de gestão na mesma linguagem da operação.</h2>
-            <p>Orçamentos, OS, vendas, clientes, estoque e financeiro organizados em uma única solução, com os exemplos e aplicações mostrados dentro da aba do GestFlow.</p>
+            <p>Orçamentos, OS, vendas, clientes, estoque e financeiro reunidos em uma única solução para dar mais organização e controle à empresa.</p>
             <div class="chip-row">
                 <span>Orçamentos</span>
                 <span>Ordens de serviço</span>
@@ -231,7 +231,7 @@
         <div class="showcase-copy">
             <span class="eyebrow">Automação Residencial</span>
             <h2>Casa inteligente com tecnologias e marcas parceiras.</h2>
-            <p>A nova aba residencial mostra claramente o que trabalhamos: iluminação, LED, tomadas inteligentes, cortinas automáticas, integração Alexa/Google, Zigbee, Wi-Fi e linhas parceiras.</p>
+            <p>Automatizamos iluminação, LED, tomadas, cortinas e outros dispositivos, com integração Alexa, Google, Zigbee e Wi-Fi para deixar a casa mais prática e conectada.</p>
             <div class="chip-row">
                 <span>Iluminação</span>
                 <span>LED</span>
@@ -250,15 +250,15 @@
 <section class="section section-soft">
     <div class="container">
         <div class="section-heading">
-            <span class="eyebrow">Cases por área</span>
-            <h2>Agora cada case fica dentro da própria solução.</h2>
-            <p>A navegação foi simplificada. Em vez de uma aba genérica de cases, cada página concentra seus próprios exemplos e aplicações.</p>
+            <span class="eyebrow">Projetos e aplicações</span>
+            <h2>Soluções aplicadas a necessidades reais.</h2>
+            <p>Conheça exemplos de como a NETTSAN atua em segurança de máquinas, monitoramento industrial, gestão e automação residencial.</p>
         </div>
         <div class="mini-case-grid">
             <article class="mini-case-card">
                 <span class="solution-number">NR12</span>
                 <h3>Proteção de serras e prensa pneumática</h3>
-                <p>Cases reais com imagens antes e depois dentro da própria página de NR12.</p>
+                <p>Proteções para serras-fita e prensa pneumática, com registros de antes e depois da solução aplicada.</p>
                 <a class="text-link" href="{{ url_for('nr12') }}#cases">Ver cases de NR12 →</a>
             </article>
             <article class="mini-case-card">

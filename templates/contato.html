@@ -1,54 +1,34 @@
 <!-- CAMINHO COMPLETO: C:\Users\vlula\OneDrive\Área de Trabalho\Projetos Backup\NETTSAN_PORTAL\templates\contato.html -->
-<!-- DATA E HORA DO ULTIMO RECODE: 2026-09-10 19:15 -03:00 -->
-<!-- MOTIVO DA ALTERACAO: Atualizar a pagina de contato para refletir as quatro areas principais da NETTSAN, incluindo Automacao Residencial. -->
+<!-- DATA E HORA DO ULTIMO RECODE: 2026-09-10 22:45 -03:00 -->
+<!-- MOTIVO DA ALTERACAO: Simplificar o contato comercial para um unico canal de WhatsApp, removendo repeticoes por solucao. -->
 {% extends "base.html" %}
 
 {% block title %}Contato | NETTSAN{% endblock %}
-{% block meta_description %}Entre em contato com a NETTSAN para conversar sobre NR12, IndFlow, GestFlow e Automação Residencial.{% endblock %}
+{% block meta_description %}Fale com a NETTSAN sobre NR12, IndFlow, GestFlow e Automação Residencial.{% endblock %}
 
 {% block content %}
 <section class="page-hero section page-hero-compact">
     <div class="container">
         <span class="eyebrow">Contato</span>
-        <h1>Qual solução você quer avaliar?</h1>
-        <p>Fale com a NETTSAN pelo WhatsApp e direcione a conversa para NR12, IndFlow, GestFlow ou Automação Residencial.</p>
+        <h1>Fale com a NETTSAN.</h1>
+        <p>Conte o que você precisa. Nossa equipe atende projetos de NR12, IndFlow, GestFlow e Automação Residencial.</p>
+        <div class="chip-row">
+            <span>NR12</span>
+            <span>IndFlow</span>
+            <span>GestFlow</span>
+            <span>Automação Residencial</span>
+        </div>
     </div>
 </section>
 
 <section class="section">
-    <div class="container contact-grid">
-        <article>
-            <span class="solution-number">01</span>
-            <h2>NR12</h2>
-            <p>Quero avaliar segurança de máquinas, adequações mecânicas, adequações elétricas, proteções e intertravamentos.</p>
-            <p><strong>WhatsApp:</strong> (71) 98606-1117</p>
-            <a class="button button-small" href="https://wa.me/5571986061117?text=Ola%2C%20quero%20falar%20sobre%20NR12." target="_blank" rel="noopener noreferrer">Falar sobre NR12</a>
-        </article>
-        <article>
-            <span class="solution-number">02</span>
-            <h2>IndFlow</h2>
-            <p>Quero avaliar monitoramento de máquinas, produção, disponibilidade, paradas e indicadores operacionais.</p>
-            <p><strong>WhatsApp:</strong> (71) 98606-1117</p>
-            <a class="button button-small" href="https://wa.me/5571986061117?text=Ola%2C%20quero%20saber%20mais%20sobre%20o%20IndFlow." target="_blank" rel="noopener noreferrer">Falar sobre IndFlow</a>
-        </article>
-        <article>
-            <span class="solution-number">03</span>
-            <h2>GestFlow</h2>
-            <p>Quero conhecer o sistema de gestão empresarial e entender como ele pode ajudar minha empresa.</p>
-            <p><strong>WhatsApp:</strong> (71) 98606-1117</p>
-            <a class="button button-small" href="https://wa.me/5571986061117?text=Ola%2C%20quero%20conhecer%20o%20GestFlow." target="_blank" rel="noopener noreferrer">Falar sobre GestFlow</a>
-        </article>
-        <article>
-            <span class="solution-number">04</span>
-            <h2>Automação Residencial</h2>
-            <p>Quero avaliar iluminação, LED, tomadas inteligentes, cortinas automáticas e integração com Alexa e Google.</p>
-            <p><strong>WhatsApp:</strong> (71) 98606-1117</p>
-            <a class="button button-small" href="https://wa.me/5571986061117?text=Ola%2C%20quero%20falar%20sobre%20automacao%20residencial." target="_blank" rel="noopener noreferrer">Falar sobre residencial</a>
-        </article>
-    </div>
-    <div class="container contact-note">
-        <strong>Canal comercial atual:</strong>
-        <p>Atendimento oficial via WhatsApp: <strong>(71) 98606-1117</strong>.</p>
+    <div class="container">
+        <div class="contact-note">
+            <strong>WhatsApp comercial</strong>
+            <p><strong>(71) 98606-1117</strong></p>
+            <p>Fale diretamente com nossa equipe e conte qual solução você procura.</p>
+            <a class="button" href="https://wa.me/5571986061117?text=Ola%2C%20quero%20falar%20com%20a%20NETTSAN." target="_blank" rel="noopener noreferrer">Chamar no WhatsApp</a>
+        </div>
     </div>
 </section>
 {% endblock %}
