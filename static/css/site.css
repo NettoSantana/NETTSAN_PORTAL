@@ -704,3 +704,110 @@ p { color:var(--muted); }
     .gestflow-real-preview-hero img { height: 330px; }
     .gestflow-real-preview figcaption { left: 12px; bottom: 12px; }
 }
+
+/* CAMINHO COMPLETO: C:\Users\vlula\OneDrive\Área de Trabalho\Projetos Backup\NETTSAN_PORTAL\static\css\site.css
+   DATA E HORA DO ULTIMO RECODE: 2026-09-11 05:35 -03:00
+   MOTIVO DA ALTERACAO: Exibir telas reais do IndFlow no portal comercial com enquadramento responsivo e hierarquia visual coerente com a identidade NETTSAN. */
+
+.indflow-hero { overflow: hidden; }
+.indflow-hero-grid { grid-template-columns: .82fr 1.18fr; }
+.indflow-product-section { overflow: hidden; }
+.indflow-section-copy { max-width: 720px; margin-bottom: 38px; }
+.indflow-section-copy > p { max-width: 680px; font-size: 1.06rem; }
+.indflow-section-copy-center { max-width: 780px; margin-inline: auto; text-align: center; }
+.indflow-section-copy-center .eyebrow { justify-content: center; }
+
+.indflow-product-shot {
+    position: relative;
+    margin: 0;
+    overflow: hidden;
+    border: 1px solid var(--line);
+    border-radius: 24px;
+    background: var(--white);
+    box-shadow: 0 24px 60px rgba(12,43,82,.13);
+}
+.indflow-product-shot img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    background: #f3f6fa;
+}
+.indflow-product-shot figcaption {
+    position: absolute;
+    left: 16px;
+    bottom: 16px;
+    padding: 8px 12px;
+    border-radius: 999px;
+    color: var(--white);
+    background: rgba(8,31,61,.88);
+    font-size: .72rem;
+    font-weight: 800;
+    box-shadow: 0 8px 24px rgba(8,31,61,.18);
+}
+.indflow-product-shot-hero img { min-height: 390px; object-fit: cover; object-position: top center; }
+.indflow-product-shot-wide img { max-height: 720px; object-fit: contain; }
+.indflow-product-shot-detail img { min-height: 430px; object-fit: contain; }
+.indflow-product-shot-tall { max-height: 760px; }
+.indflow-product-shot-tall img { width: 100%; height: 760px; object-fit: cover; object-position: top center; }
+.indflow-product-shot-utilities img { max-height: 540px; }
+
+.indflow-split-real {
+    display: grid;
+    grid-template-columns: .78fr 1.22fr;
+    align-items: center;
+    gap: 64px;
+}
+.indflow-split-real .indflow-section-copy { margin-bottom: 0; }
+.indflow-split-reverse { grid-template-columns: .82fr 1.18fr; }
+.indflow-split-reverse .indflow-section-copy { order: 2; }
+.indflow-split-reverse .indflow-product-shot { order: 1; }
+
+.indflow-highlight-list { display: grid; gap: 10px; margin-top: 28px; }
+.indflow-highlight-list div {
+    padding: 17px 18px;
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    background: var(--white);
+}
+.indflow-highlight-list strong,
+.indflow-highlight-list span { display: block; }
+.indflow-highlight-list strong { margin-bottom: 5px; color: var(--blue); }
+.indflow-highlight-list span { color: var(--muted); font-size: .9rem; }
+
+.indflow-feature-grid article { min-height: 190px; }
+
+@media (max-width: 1060px) {
+    .indflow-hero-grid,
+    .indflow-split-real,
+    .indflow-split-reverse { grid-template-columns: 1fr; }
+    .indflow-split-reverse .indflow-section-copy,
+    .indflow-split-reverse .indflow-product-shot { order: initial; }
+    .indflow-product-shot-hero img { min-height: 0; }
+    .indflow-product-shot-tall { max-height: 620px; }
+    .indflow-product-shot-tall img { height: 620px; }
+}
+
+@media (max-width: 620px) {
+    .indflow-section-copy { margin-bottom: 26px; }
+    .indflow-section-copy-center { text-align: left; }
+    .indflow-section-copy-center .eyebrow { justify-content: flex-start; }
+    .indflow-product-shot { border-radius: 17px; }
+    .indflow-product-shot figcaption {
+        position: static;
+        display: block;
+        border-radius: 0;
+        color: var(--muted);
+        background: var(--white);
+        box-shadow: none;
+    }
+    .indflow-product-shot-detail img,
+    .indflow-product-shot-tall img,
+    .indflow-product-shot-wide img,
+    .indflow-product-shot-utilities img {
+        min-height: 0;
+        height: auto;
+        max-height: none;
+        object-fit: contain;
+    }
+}

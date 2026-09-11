@@ -1,142 +1,144 @@
 <!-- CAMINHO COMPLETO: C:\Users\vlula\OneDrive\Área de Trabalho\Projetos Backup\NETTSAN_PORTAL\templates\indflow.html -->
-<!-- DATA E HORA DO ULTIMO RECODE: 2026-09-10 22:45 -03:00 -->
-<!-- MOTIVO DA ALTERACAO: Substituir textos sobre estrutura da pagina por comunicacao comercial direcionada ao cliente. -->
+<!-- DATA E HORA DO ULTIMO RECODE: 2026-09-11 05:35 -03:00 -->
+<!-- MOTIVO DA ALTERACAO: Apresentar o IndFlow com telas reais de indicadores, historico, detalhe por hora, paradas e utilidades para demonstrar o produto ao cliente. -->
 {% extends "base.html" %}
 
 {% block title %}IndFlow | Monitoramento industrial da NETTSAN{% endblock %}
-{% block meta_description %}Conheça o IndFlow, solução da NETTSAN para monitoramento de máquinas, produção em tempo real, paradas e indicadores industriais.{% endblock %}
+{% block meta_description %}Conheça o IndFlow, solução da NETTSAN para monitoramento de máquinas, produção em tempo real, OEE, paradas, histórico e utilidades industriais.{% endblock %}
 
 {% block content %}
-<section class="page-hero section">
-    <div class="container page-hero-grid">
+<section class="page-hero section indflow-hero">
+    <div class="container page-hero-grid indflow-hero-grid">
         <div>
             <span class="eyebrow">IndFlow</span>
-            <h1>Transforme sua produção em informação.</h1>
-            <p>O IndFlow conecta máquinas, sensores e produção para transformar eventos do chão de fábrica em indicadores claros, históricos e informação para decisão.</p>
+            <h1>Veja sua operação acontecendo em tempo real.</h1>
+            <p>O IndFlow conecta máquinas, sensores e produção para mostrar o que está acontecendo no chão de fábrica: produção, OEE, disponibilidade, paradas, histórico e desempenho operacional.</p>
             <div class="chip-row">
                 <span>Produção em tempo real</span>
-                <span>RUN / STOP</span>
                 <span>OEE</span>
+                <span>RUN / STOP</span>
                 <span>Paradas</span>
                 <span>Histórico</span>
-                <span>Integração</span>
+                <span>Utilidades</span>
             </div>
+            <a class="button" href="{{ url_for('contato') }}">Quero conhecer o IndFlow</a>
         </div>
-        <div class="production-panel">
-            <div class="production-head">
-                <div>
-                    <small>Exemplo visual</small>
-                    <strong>Indicadores da máquina</strong>
-                </div>
-                <span class="live-pill">ONLINE</span>
-            </div>
-            <div class="production-value">
-                <small>Produção acumulada</small>
-                <strong>97.020</strong><span>pcs</span>
-            </div>
-            <div class="timeline">
-                <span class="run" style="width: 64%"></span>
-                <span class="stop" style="width: 12%"></span>
-                <span class="run" style="width: 24%"></span>
-            </div>
-            <div class="production-foot">
-                <div><small>OEE</small><strong>64,9%</strong></div>
-                <div><small>Qualidade</small><strong>100%</strong></div>
-                <div><small>MTTR</small><strong>17 min</strong></div>
-            </div>
-        </div>
+        <figure class="indflow-product-shot indflow-product-shot-hero">
+            <img src="{{ url_for('static', filename='img/indflow/indicadores.png') }}" alt="Tela real do IndFlow com indicadores de OEE, disponibilidade, performance, qualidade, produção e gráficos operacionais">
+            <figcaption>Indicadores reais da operação em uma única visão.</figcaption>
+        </figure>
     </div>
 </section>
 
-<section class="section">
+<section class="section section-soft">
     <div class="container">
         <div class="section-heading">
-            <span class="eyebrow">O que o IndFlow entrega</span>
-            <h2>Informação simples para ação rápida na operação.</h2>
-            <p>O foco é transformar eventos da máquina em dados úteis para acompanhamento e melhoria contínua.</p>
+            <span class="eyebrow">Visão operacional</span>
+            <h2>Do resultado geral ao comportamento de cada máquina.</h2>
+            <p>Acompanhe produção, meta, tempo produzindo, tempo parado e indicadores de eficiência sem depender de anotações ou controles paralelos.</p>
         </div>
-        <div class="feature-grid">
+        <div class="feature-grid indflow-feature-grid">
             <article>
-                <h3>Produção em tempo real</h3>
-                <p>Acompanhe a evolução da produção ao longo do turno e do dia.</p>
+                <h3>Produção e meta</h3>
+                <p>Compare o realizado com o planejado e identifique rapidamente onde a produção está acima ou abaixo da meta.</p>
             </article>
             <article>
-                <h3>Status RUN / STOP</h3>
-                <p>Veja quando a máquina está produzindo e quando está parada.</p>
+                <h3>OEE e disponibilidade</h3>
+                <p>Tenha indicadores de eficiência, performance, qualidade e disponibilidade em uma leitura direta.</p>
             </article>
             <article>
-                <h3>Paradas e recorrências</h3>
-                <p>Consulte o histórico para entender comportamento e causas mais frequentes.</p>
+                <h3>RUN / STOP</h3>
+                <p>Visualize quando a máquina está produzindo, quando está parada e por quanto tempo cada estado permaneceu.</p>
             </article>
             <article>
-                <h3>Indicadores operacionais</h3>
-                <p>OEE, disponibilidade, performance, qualidade e tempos associados à rotina da máquina.</p>
+                <h3>Histórico e recorrências</h3>
+                <p>Compare dias e períodos para encontrar padrões, perdas recorrentes e oportunidades de melhoria.</p>
             </article>
         </div>
     </div>
 </section>
 
-<section class="section section-soft" id="cases">
+<section class="section indflow-product-section">
     <div class="container">
-        <div class="section-heading">
-            <span class="eyebrow">Aplicações do IndFlow</span>
-            <h2>Monitoramento industrial aplicado à rotina da fábrica.</h2>
-            <p>Da coleta de sinais aos indicadores de produção, o IndFlow integra dados da operação para apoiar acompanhamento, análise e melhoria contínua.</p>
+        <div class="indflow-section-copy">
+            <span class="eyebrow">Histórico operacional</span>
+            <h2>Entenda o que aconteceu em cada turno.</h2>
+            <p>Consulte a produção por dia, tempo produzindo, tempo parado, ordens de produção e quantidade de paradas. O histórico transforma o que aconteceu na máquina em uma base clara para análise.</p>
         </div>
-        <div class="mini-case-grid">
-            <article class="mini-case-card">
-                <span class="solution-number">01</span>
-                <h3>Monitoramento de máquina</h3>
-                <p>Contagem de ciclos, produção por pulso, leitura de estado e acompanhamento do comportamento da máquina.</p>
-                <ul class="bullet-list">
-                    <li>Integração com sensores</li>
-                    <li>Coleta automática</li>
-                    <li>Visão em tempo real</li>
-                </ul>
-            </article>
-            <article class="mini-case-card">
-                <span class="solution-number">02</span>
-                <h3>OEE, paradas e análise operacional</h3>
-                <p>Indicadores para comparar meta, produção, disponibilidade e evolução da eficiência ao longo do período.</p>
-                <ul class="bullet-list">
-                    <li>OEE e disponibilidade</li>
-                    <li>Paradas planejadas e não planejadas</li>
-                    <li>Histórico para tomada de decisão</li>
-                </ul>
-            </article>
-            <article class="mini-case-card">
-                <span class="solution-number">03</span>
-                <h3>Aplicações industriais conectadas</h3>
-                <p>Controle de acesso a máquinas, monitoramento remoto, utilidades e outras integrações ligadas à operação industrial.</p>
-                <ul class="bullet-list">
-                    <li>RFID e lógica de autorização</li>
-                    <li>Monitoramento de equipamentos</li>
-                    <li>Base para manutenção e expansão futura</li>
-                </ul>
-            </article>
-        </div>
+        <figure class="indflow-product-shot indflow-product-shot-wide">
+            <img src="{{ url_for('static', filename='img/indflow/historico.png') }}" alt="Tela real do histórico operacional do IndFlow com produção, tempo produzindo, tempo parado, OPs e paradas por dia">
+            <figcaption>Histórico operacional por período e por máquina.</figcaption>
+        </figure>
     </div>
 </section>
 
-<section class="section">
-    <div class="container showcase-grid">
-        <div class="showcase-copy">
-            <span class="eyebrow">Leitura da operação</span>
-            <h2>Da máquina ao gestor, em uma linha simples de informação.</h2>
-            <p>O IndFlow liga os eventos da máquina à leitura operacional. Isso melhora a percepção do que está acontecendo no chão de fábrica e cria uma base melhor para gestão e manutenção.</p>
+<section class="section section-soft indflow-product-section">
+    <div class="container indflow-split-real">
+        <div class="indflow-section-copy">
+            <span class="eyebrow">Detalhe por hora</span>
+            <h2>Do resultado do dia ao detalhe de cada hora.</h2>
+            <p>Abra um dia e veja exatamente como a operação se comportou hora a hora. A linha do tempo deixa visível quando a máquina produziu, quando parou e quantas interrupções aconteceram em cada intervalo.</p>
             <div class="metric-list">
-                <div><strong>Máquina</strong><span>Sensores, sinais e eventos do equipamento.</span></div>
-                <div><strong>Coleta</strong><span>Leitura, tratamento e envio da informação.</span></div>
-                <div><strong>Painel</strong><span>Indicadores visuais simples para a rotina.</span></div>
-                <div><strong>Ação</strong><span>Melhor resposta operacional com base em dados.</span></div>
+                <div><strong>Produção</strong><span>Quantidade realizada em cada faixa de horário.</span></div>
+                <div><strong>Meta</strong><span>Referência planejada para comparação direta.</span></div>
+                <div><strong>Produzindo</strong><span>Tempo acumulado em estado RUN.</span></div>
+                <div><strong>Parado</strong><span>Tempo acumulado em estado STOP.</span></div>
             </div>
-            <a class="button" href="{{ url_for('contato') }}">Falar sobre IndFlow</a>
         </div>
-        <div class="stat-grid">
-            <article class="stat-card"><small>Visão</small><strong>Tempo real</strong><span>Acompanhe o agora da operação.</span></article>
-            <article class="stat-card"><small>Visão</small><strong>Histórico</strong><span>Compare períodos e recorrências.</span></article>
-            <article class="stat-card"><small>Visão</small><strong>Meta</strong><span>Produção versus planejado.</span></article>
-            <article class="stat-card"><small>Visão</small><strong>Suporte</strong><span>Base para evolução e integração.</span></article>
+        <figure class="indflow-product-shot indflow-product-shot-detail">
+            <img src="{{ url_for('static', filename='img/indflow/detalhe-dia.png') }}" alt="Detalhe real de um dia no IndFlow com produção, meta, tempo produzindo, tempo parado e linha do tempo por hora">
+            <figcaption>Linha do tempo operacional por hora.</figcaption>
+        </figure>
+    </div>
+</section>
+
+<section class="section indflow-product-section">
+    <div class="container indflow-split-real indflow-split-reverse">
+        <div class="indflow-section-copy">
+            <span class="eyebrow">Gestão de paradas</span>
+            <h2>Descubra onde o tempo da produção está sendo perdido.</h2>
+            <p>O IndFlow registra as paradas detectadas automaticamente e permite classificar cada ocorrência. Isso ajuda a separar pequenas interrupções de eventos relevantes e enxergar causas recorrentes.</p>
+            <div class="indflow-highlight-list">
+                <div><strong>Detecção automática</strong><span>As ocorrências vêm diretamente do comportamento RUN / STOP da máquina.</span></div>
+                <div><strong>Classificação</strong><span>Associe o motivo da parada sem alterar a telemetria original.</span></div>
+                <div><strong>Tempo acumulado</strong><span>Veja quanto tempo foi perdido e onde estão as maiores oportunidades.</span></div>
+            </div>
+        </div>
+        <figure class="indflow-product-shot indflow-product-shot-tall">
+            <img src="{{ url_for('static', filename='img/indflow/paradas.png') }}" alt="Tela real do IndFlow para análise e classificação das paradas detectadas">
+            <figcaption>Paradas detectadas, duração e classificação.</figcaption>
+        </figure>
+    </div>
+</section>
+
+<section class="section section-soft indflow-product-section">
+    <div class="container">
+        <div class="indflow-section-copy indflow-section-copy-center">
+            <span class="eyebrow">Utilidades industriais</span>
+            <h2>Produção e infraestrutura no mesmo ambiente.</h2>
+            <p>Além das máquinas de produção, o IndFlow pode concentrar o acompanhamento das utilidades que sustentam a operação, como ar comprimido, energia e geradores.</p>
+        </div>
+        <figure class="indflow-product-shot indflow-product-shot-wide indflow-product-shot-utilities">
+            <img src="{{ url_for('static', filename='img/indflow/utilidades.png') }}" alt="Tela real de utilidades do IndFlow com acompanhamento de ar comprimido e energia ou gerador">
+            <figcaption>Visão de utilidades integradas à operação industrial.</figcaption>
+        </figure>
+    </div>
+</section>
+
+<section class="section section-blue">
+    <div class="container split-section">
+        <div>
+            <span class="eyebrow eyebrow-light">Da máquina à decisão</span>
+            <h2>Informação útil para agir melhor.</h2>
+        </div>
+        <div class="split-copy">
+            <p>O IndFlow transforma sinais da máquina em informação operacional para quem precisa acompanhar, analisar e melhorar a produção.</p>
+            <div class="pillar-grid">
+                <div><strong>Máquina</strong><span>Sinais, sensores e eventos do equipamento.</span></div>
+                <div><strong>Coleta</strong><span>Leitura automática da operação.</span></div>
+                <div><strong>Análise</strong><span>Histórico, OEE, paradas e indicadores.</span></div>
+                <div><strong>Ação</strong><span>Base para decisões e melhoria contínua.</span></div>
+            </div>
         </div>
     </div>
 </section>
@@ -145,8 +147,8 @@
     <div class="container final-cta-inner">
         <div>
             <span class="eyebrow eyebrow-light">IndFlow</span>
-            <h2>Quer enxergar melhor a sua produção?</h2>
-            <p>Apresente o processo e avaliamos por onde o monitoramento pode começar.</p>
+            <h2>Quer enxergar sua operação em tempo real?</h2>
+            <p>Mostre sua máquina e seu processo. A NETTSAN avalia onde o monitoramento pode começar e como o IndFlow pode crescer com a operação.</p>
         </div>
         <a class="button button-white" href="{{ url_for('contato') }}">Falar sobre IndFlow</a>
     </div>
