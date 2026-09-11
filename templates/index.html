@@ -1,6 +1,6 @@
 <!-- CAMINHO COMPLETO: C:\Users\vlula\OneDrive\Área de Trabalho\Projetos Backup\NETTSAN_PORTAL\templates\index.html -->
-<!-- DATA E HORA DO ULTIMO RECODE: 2026-09-10 22:45 -03:00 -->
-<!-- MOTIVO DA ALTERACAO: Substituir textos internos sobre abas e estrutura do portal por linguagem comercial voltada ao cliente. -->
+<!-- DATA E HORA DO ULTIMO RECODE: 2026-09-11 05:35 -03:00 -->
+<!-- MOTIVO DA ALTERACAO: Substituir o mockup generico do GestFlow na Home por uma imagem real do dashboard do sistema. -->
 {% extends "base.html" %}
 
 {% block title %}NETTSAN | NR12, IndFlow, GestFlow e Automação Residencial{% endblock %}
@@ -212,17 +212,10 @@
             <a class="button" href="{{ url_for('gestflow') }}">Abrir página do GestFlow</a>
         </div>
 
-        <div class="browser-mockup">
-            <div class="browser-top"><span></span><span></span><span></span></div>
-            <div class="browser-body">
-                <div class="mock-sidebar"><b>G</b><i></i><i></i><i></i><i></i></div>
-                <div class="mock-main">
-                    <div class="mock-title"></div>
-                    <div class="mock-kpis"><span></span><span></span><span></span></div>
-                    <div class="mock-table"><i></i><i></i><i></i><i></i><i></i></div>
-                </div>
-            </div>
-        </div>
+        <figure class="gestflow-real-preview gestflow-real-preview-home">
+            <img src="{{ url_for('static', filename='img/gestflow/dashboard-real.png') }}" alt="Dashboard real do GestFlow com indicadores financeiros, vendas, ordens de serviço, clientes e calendário financeiro">
+            <figcaption>Dashboard real do GestFlow</figcaption>
+        </figure>
     </div>
 </section>
 
