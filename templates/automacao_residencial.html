@@ -1,27 +1,26 @@
 <!-- CAMINHO COMPLETO: C:\Users\vlula\OneDrive\Área de Trabalho\Projetos Backup\NETTSAN_PORTAL\templates\automacao_residencial.html -->
-<!-- DATA E HORA DO ULTIMO RECODE: 2026-09-10 22:45 -03:00 -->
-<!-- MOTIVO DA ALTERACAO: Substituir texto explicativo sobre a pagina por comunicacao comercial direcionada ao cliente. -->
+<!-- DATA E HORA DO ULTIMO RECODE: 2026-09-12 16:10 -03:00 -->
+<!-- MOTIVO DA ALTERACAO: Transformar a pagina de Automacao Residencial em oferta comercial com tres kits, limites claros e aviso de assistentes de voz nao inclusos. -->
 {% extends "base.html" %}
 
 {% block title %}Automação Residencial | NETTSAN{% endblock %}
-{% block meta_description %}Conheça a Automação Residencial da NETTSAN com iluminação inteligente, LED, tomadas inteligentes, cortinas automáticas, Alexa, Google, Zigbee e Wi-Fi.{% endblock %}
+{% block meta_description %}Automação residencial NETTSAN com kits prontos para apartamentos, iluminação inteligente, controle pelo celular e compatibilidade com Alexa e Google Assistente.{% endblock %}
 
 {% block content %}
 <section class="page-hero section">
     <div class="container page-hero-grid">
         <div>
             <span class="eyebrow">Automação Residencial</span>
-            <h1>Casa inteligente com conforto, praticidade e integração.</h1>
-            <p>A NETTSAN trabalha com iluminação inteligente, LED, tomadas inteligentes, cortinas automáticas e integração com Alexa e Google, utilizando tecnologias Zigbee e Wi-Fi.</p>
+            <h1>Automatize sua casa sem trocar seus interruptores.</h1>
+            <p>A NETTSAN transforma os pontos que você já usa em uma automação prática e discreta, com controle pelo interruptor, celular, rotinas e assistentes de voz compatíveis.</p>
             <div class="chip-row">
-                <span>Iluminação</span>
-                <span>LED</span>
-                <span>Tomadas inteligentes</span>
-                <span>Cortinas automáticas</span>
-                <span>Alexa / Google</span>
-                <span>Zigbee / Wi-Fi</span>
+                <span>Iluminação inteligente</span>
+                <span>Controle pelo celular</span>
+                <span>Rotinas automáticas</span>
+                <span>Controle de ar e TV</span>
+                <span>Compatível com Alexa e Google</span>
             </div>
-            <a class="button" href="{{ url_for('contato') }}">Solicitar orçamento</a>
+            <a class="button" href="#kits">Ver kits disponíveis</a>
         </div>
         <div class="hero-preview">
             <img src="{{ url_for('static', filename='img/residencial/hero.jpg') }}" alt="Ambiente residencial com controle por smartphone, caixa de som inteligente e tomada inteligente">
@@ -29,54 +28,169 @@
     </div>
 </section>
 
+<section class="section section-soft residential-kits" id="kits">
+    <div class="container">
+        <div class="section-heading residential-kits-heading">
+            <span class="eyebrow">Kits prontos</span>
+            <h2>Escolha o tamanho do seu apartamento.</h2>
+            <p>Pacotes completos para automatizar os principais ambientes da casa, preservando os interruptores existentes e evitando grandes reformas.</p>
+        </div>
+
+        <div class="residential-kit-grid">
+            <article class="residential-kit-card">
+                <div class="residential-kit-head">
+                    <span class="residential-kit-type">AP Compacto</span>
+                    <h3>Até 1 quarto</h3>
+                    <p>Para apartamentos compactos que querem começar com os principais pontos automatizados.</p>
+                </div>
+
+                <div class="residential-kit-price">
+                    <span>A partir de</span>
+                    <strong>R$ 1.690</strong>
+                </div>
+
+                <div class="residential-kit-content">
+                    <strong>O kit inclui:</strong>
+                    <ul>
+                        <li>Sala, 1 quarto, cozinha, banheiro e área de serviço</li>
+                        <li>Até 5 circuitos de iluminação</li>
+                        <li>Controle inteligente em até 2 ambientes por infravermelho</li>
+                        <li>Central de automação inclusa</li>
+                        <li>Aplicativo no celular</li>
+                        <li>Instalação e configuração</li>
+                    </ul>
+                </div>
+
+                <div class="residential-kit-voice">
+                    <strong>Compatível com Alexa e Google Assistente</strong>
+                    <span>Assistentes de voz não acompanham o kit.</span>
+                </div>
+
+                <a class="button residential-kit-button" href="{{ url_for('contato') }}">Solicitar instalação</a>
+            </article>
+
+            <article class="residential-kit-card residential-kit-card-featured">
+                <span class="residential-kit-badge">Mais escolhido</span>
+
+                <div class="residential-kit-head">
+                    <span class="residential-kit-type">AP 2 Quartos</span>
+                    <h3>Até 2 quartos</h3>
+                    <p>Nosso pacote principal para apartamentos com os ambientes mais usados integrados em uma única automação.</p>
+                </div>
+
+                <div class="residential-kit-price">
+                    <span>A partir de</span>
+                    <strong>R$ 2.090</strong>
+                </div>
+
+                <div class="residential-kit-content">
+                    <strong>O kit inclui:</strong>
+                    <ul>
+                        <li>Sala, 2 quartos, cozinha, banheiro e área de serviço</li>
+                        <li>Até 7 circuitos de iluminação</li>
+                        <li>Controle inteligente em até 3 ambientes por infravermelho</li>
+                        <li>Central de automação inclusa</li>
+                        <li>Aplicativo no celular</li>
+                        <li>Instalação e configuração</li>
+                    </ul>
+                </div>
+
+                <div class="residential-kit-voice">
+                    <strong>Compatível com Alexa e Google Assistente</strong>
+                    <span>Assistentes de voz não acompanham o kit.</span>
+                </div>
+
+                <a class="button residential-kit-button" href="{{ url_for('contato') }}">Quero esse</a>
+            </article>
+
+            <article class="residential-kit-card">
+                <div class="residential-kit-head">
+                    <span class="residential-kit-type">AP 3 Quartos</span>
+                    <h3>Até 3 quartos</h3>
+                    <p>Para apartamentos maiores que precisam de mais pontos e ambientes conectados desde o início.</p>
+                </div>
+
+                <div class="residential-kit-price">
+                    <span>A partir de</span>
+                    <strong>R$ 2.490</strong>
+                </div>
+
+                <div class="residential-kit-content">
+                    <strong>O kit inclui:</strong>
+                    <ul>
+                        <li>Sala, 3 quartos, cozinha, banheiro e área de serviço</li>
+                        <li>Até 9 circuitos de iluminação</li>
+                        <li>Controle inteligente em até 4 ambientes por infravermelho</li>
+                        <li>Central de automação inclusa</li>
+                        <li>Aplicativo no celular</li>
+                        <li>Instalação e configuração</li>
+                    </ul>
+                </div>
+
+                <div class="residential-kit-voice">
+                    <strong>Compatível com Alexa e Google Assistente</strong>
+                    <span>Assistentes de voz não acompanham o kit.</span>
+                </div>
+
+                <a class="button residential-kit-button" href="{{ url_for('contato') }}">Solicitar instalação</a>
+            </article>
+        </div>
+
+        <div class="residential-kit-note">
+            <strong>Instalação com a infraestrutura existente.</strong>
+            <p>Os kits consideram os pontos elétricos já disponíveis no imóvel. Adequações elétricas, novos pontos, passagem de cabos, reparos civis e equipamentos adicionais são orçados separadamente.</p>
+        </div>
+    </div>
+</section>
+
 <section class="section" id="campos">
     <div class="container">
         <div class="section-heading">
-            <span class="eyebrow">O que trabalhamos</span>
-            <h2>Campos de atuação em automação residencial.</h2>
-            <p>Soluções que integram iluminação, conforto e conectividade para tornar cada ambiente mais prático, moderno e inteligente.</p>
+            <span class="eyebrow">Personalize sua automação</span>
+            <h2>Quer ir além do kit?</h2>
+            <p>Depois da base instalada, você pode ampliar sua automação com novos equipamentos e funções conforme a sua necessidade.</p>
         </div>
         <div class="media-grid">
             <article class="media-card">
                 <img src="{{ url_for('static', filename='img/residencial/iluminacao.jpg') }}" alt="Exemplo de iluminação inteligente em ambiente residencial">
                 <div class="media-card-body">
-                    <h3>Iluminação inteligente</h3>
-                    <p>Controle da iluminação pelo app, por voz ou por automação programada.</p>
+                    <h3>Pontos adicionais</h3>
+                    <p>Amplie a automação da iluminação para novos circuitos e ambientes da residência.</p>
                 </div>
             </article>
             <article class="media-card">
                 <img src="{{ url_for('static', filename='img/residencial/led.jpg') }}" alt="Exemplo de LED aplicado em ambiente interno">
                 <div class="media-card-body">
-                    <h3>LED e ambientes</h3>
-                    <p>Soluções em LED para ambientes mais modernos, econômicos e acolhedores.</p>
+                    <h3>Iluminação LED</h3>
+                    <p>Adicione fitas, perfis e cenas de iluminação para criar ambientes mais funcionais e confortáveis.</p>
                 </div>
             </article>
             <article class="media-card">
                 <img src="{{ url_for('static', filename='img/residencial/tomadas.jpg') }}" alt="Exemplo de tomada inteligente instalada na parede">
                 <div class="media-card-body">
                     <h3>Tomadas inteligentes</h3>
-                    <p>Ligue e desligue equipamentos de onde estiver, com mais praticidade e segurança.</p>
+                    <p>Controle equipamentos pelo celular e inclua horários e rotinas de funcionamento.</p>
                 </div>
             </article>
             <article class="media-card">
                 <img src="{{ url_for('static', filename='img/residencial/cortinas.jpg') }}" alt="Exemplo de cortinas automáticas em ambiente residencial">
                 <div class="media-card-body">
-                    <h3>Cortinas automáticas</h3>
-                    <p>Acionamento por aplicativo, voz, horário ou integração com cenas do ambiente.</p>
+                    <h3>Cortinas automatizadas</h3>
+                    <p>Abra e feche cortinas pelo aplicativo, horário programado ou cenas da residência.</p>
                 </div>
             </article>
             <article class="media-card">
                 <img src="{{ url_for('static', filename='img/residencial/alexa-google.jpg') }}" alt="Exemplo de integração com Alexa e Google Assistente">
                 <div class="media-card-body">
-                    <h3>Integração Alexa e Google</h3>
-                    <p>Controle por voz com Amazon Alexa e Google Assistente para centralizar a casa inteligente.</p>
+                    <h3>Alexa e Google Assistente</h3>
+                    <p>Integre a automação aos assistentes de voz que você já possui. O equipamento de voz é adquirido separadamente.</p>
                 </div>
             </article>
             <article class="media-card">
-                <img src="{{ url_for('static', filename='img/residencial/zigbee-wifi.jpg') }}" alt="Exemplo visual de conectividade Zigbee e Wi-Fi">
+                <img src="{{ url_for('static', filename='img/residencial/zigbee-wifi.jpg') }}" alt="Exemplo visual de sensores e dispositivos de automação">
                 <div class="media-card-body">
-                    <h3>Zigbee e Wi-Fi</h3>
-                    <p>Tecnologias confiáveis para projetos simples ou mais completos, conforme a necessidade da residência.</p>
+                    <h3>Sensores e outros dispositivos</h3>
+                    <p>Adicione sensores de portas e janelas, fechaduras inteligentes, câmeras e outros recursos compatíveis.</p>
                 </div>
             </article>
         </div>
@@ -121,12 +235,12 @@
         <div class="showcase-copy">
             <span class="eyebrow">Como entregamos</span>
             <h2>Projeto, instalação, configuração e suporte.</h2>
-            <p>Nosso foco não é apenas vender um dispositivo, mas estruturar a solução certa para o ambiente do cliente.</p>
+            <p>Você recebe a automação instalada, configurada e pronta para usar no dia a dia.</p>
             <div class="metric-list">
-                <div><strong>Projeto</strong><span>Entendimento do ambiente, da rotina e do objetivo da automação.</span></div>
-                <div><strong>Instalação</strong><span>Aplicação dos equipamentos com lógica adequada ao uso real.</span></div>
-                <div><strong>Integração</strong><span>Conexão com app, voz, cenas, rotinas e dispositivos compatíveis.</span></div>
-                <div><strong>Expansão</strong><span>Base preparada para crescer com a necessidade do cliente.</span></div>
+                <div><strong>Preservamos seus interruptores</strong><span>A automação é instalada de forma discreta, mantendo o uso manual dos comandos existentes.</span></div>
+                <div><strong>Aplicativo configurado</strong><span>Entregamos o controle pelo celular pronto para os ambientes incluídos no kit.</span></div>
+                <div><strong>Rotinas e integração</strong><span>Configuramos horários, cenas e integrações compatíveis com a estrutura contratada.</span></div>
+                <div><strong>Expansão quando quiser</strong><span>Novos pontos e dispositivos podem ser adicionados posteriormente.</span></div>
             </div>
             <a class="button" href="{{ url_for('contato') }}">Falar com a NETTSAN</a>
         </div>
@@ -140,10 +254,10 @@
     <div class="container final-cta-inner">
         <div>
             <span class="eyebrow eyebrow-light">Automação Residencial</span>
-            <h2>Pronto para ter uma casa mais inteligente?</h2>
-            <p>Fale com a equipe da NETTSAN e receba um projeto personalizado para o seu ambiente.</p>
+            <h2>Escolha seu kit e comece pelos ambientes que mais usa.</h2>
+            <p>Fale com a NETTSAN para validar os pontos existentes no imóvel e confirmar a instalação do pacote escolhido.</p>
         </div>
-        <a class="button button-white" href="{{ url_for('contato') }}">Solicitar orçamento</a>
+        <a class="button button-white" href="#kits">Ver kits</a>
     </div>
 </section>
 {% endblock %}

@@ -1,6 +1,6 @@
 /* CAMINHO COMPLETO: C:\Users\vlula\OneDrive\Área de Trabalho\Projetos Backup\NETTSAN_PORTAL\static\css\site.css
-   DATA E HORA DO ULTIMO RECODE: 2026-09-11 05:35 -03:00
-   MOTIVO DA ALTERACAO: Exibir telas reais do GestFlow na Home e na pagina do produto, substituindo o mockup generico. */
+   DATA E HORA DO ULTIMO RECODE: 2026-09-12 16:10 -03:00
+   MOTIVO DA ALTERACAO: Estilizar os tres kits comerciais da pagina de Automacao Residencial e manter o restante do portal sem alteracoes. */
 
 :root {
     --blue:#184178; --blue-dark:#0c2b52; --blue-deep:#081f3d; --blue-soft:#edf4fb;
@@ -810,4 +810,201 @@ p { color:var(--muted); }
         max-height: none;
         object-fit: contain;
     }
+}
+
+/* CAMINHO COMPLETO: C:\Users\vlula\OneDrive\Área de Trabalho\Projetos Backup\NETTSAN_PORTAL\static\css\site.css
+   DATA E HORA DO ULTIMO RECODE: 2026-09-12 16:10 -03:00
+   MOTIVO DA ALTERACAO: Estilizar os tres kits comerciais da pagina de Automacao Residencial, destacar o pacote de 2 quartos e manter a secao responsiva. */
+
+.residential-kits { overflow: hidden; }
+.residential-kits-heading { max-width: 820px; }
+
+.residential-kit-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+    align-items: stretch;
+}
+
+.residential-kit-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    padding: 32px;
+    border: 1px solid var(--line);
+    border-radius: 24px;
+    background: var(--white);
+    box-shadow: 0 18px 46px rgba(12,43,82,.08);
+}
+
+.residential-kit-card-featured {
+    border: 2px solid var(--blue);
+    box-shadow: 0 24px 60px rgba(24,65,120,.17);
+    transform: translateY(-10px);
+}
+
+.residential-kit-badge {
+    position: absolute;
+    top: 18px;
+    right: 18px;
+    padding: 7px 10px;
+    border-radius: 999px;
+    color: var(--white);
+    background: var(--blue);
+    font-size: .7rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: .08em;
+}
+
+.residential-kit-head { padding-right: 4px; }
+.residential-kit-card-featured .residential-kit-head { padding-right: 118px; }
+
+.residential-kit-type {
+    display: inline-block;
+    margin-bottom: 12px;
+    color: var(--blue);
+    font-size: .76rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: .1em;
+}
+
+.residential-kit-head h3 {
+    margin-bottom: 12px;
+    color: var(--blue-dark);
+    font-size: 1.7rem;
+}
+
+.residential-kit-head p {
+    min-height: 78px;
+    margin-bottom: 24px;
+}
+
+.residential-kit-price {
+    margin: 0 -32px 24px;
+    padding: 22px 32px;
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+    background: var(--soft);
+}
+
+.residential-kit-card-featured .residential-kit-price { background: var(--blue-soft); }
+
+.residential-kit-price span {
+    display: block;
+    margin-bottom: 3px;
+    color: var(--muted);
+    font-size: .76rem;
+    font-weight: 750;
+    text-transform: uppercase;
+    letter-spacing: .06em;
+}
+
+.residential-kit-price strong {
+    display: block;
+    color: var(--blue-dark);
+    font-size: clamp(2rem,3vw,2.7rem);
+    line-height: 1;
+    letter-spacing: -.04em;
+}
+
+.residential-kit-content {
+    flex: 1;
+    margin-bottom: 22px;
+}
+
+.residential-kit-content > strong {
+    display: block;
+    margin-bottom: 10px;
+    color: var(--ink);
+    font-size: .92rem;
+}
+
+.residential-kit-content ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.residential-kit-content li {
+    position: relative;
+    margin: 10px 0;
+    padding-left: 20px;
+    color: var(--muted);
+    font-size: .91rem;
+}
+
+.residential-kit-content li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: .62em;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--blue);
+    box-shadow: 0 0 0 4px var(--blue-soft);
+}
+
+.residential-kit-voice {
+    margin-bottom: 20px;
+    padding: 16px;
+    border: 1px solid var(--blue-line);
+    border-radius: 14px;
+    background: var(--blue-soft);
+}
+
+.residential-kit-voice strong,
+.residential-kit-voice span {
+    display: block;
+}
+
+.residential-kit-voice strong {
+    margin-bottom: 4px;
+    color: var(--blue-dark);
+    font-size: .83rem;
+}
+
+.residential-kit-voice span {
+    color: var(--muted);
+    font-size: .78rem;
+}
+
+.residential-kit-button { width: 100%; }
+
+.residential-kit-note {
+    margin-top: 30px;
+    padding: 22px 24px;
+    border-left: 4px solid var(--blue);
+    border-radius: 0 14px 14px 0;
+    background: var(--white);
+}
+
+.residential-kit-note strong {
+    display: block;
+    margin-bottom: 4px;
+    color: var(--blue-dark);
+}
+
+.residential-kit-note p { margin: 0; }
+
+@media (max-width: 1060px) {
+    .residential-kit-grid { grid-template-columns: 1fr; }
+    .residential-kit-card-featured { transform: none; }
+    .residential-kit-head p { min-height: 0; }
+}
+
+@media (max-width: 620px) {
+    .residential-kit-card { padding: 24px; }
+    .residential-kit-card-featured .residential-kit-head { padding-right: 0; padding-top: 40px; }
+    .residential-kit-price {
+        margin-right: -24px;
+        margin-left: -24px;
+        padding-right: 24px;
+        padding-left: 24px;
+    }
+    .residential-kit-badge { top: 18px; left: 24px; right: auto; }
+    .residential-kit-note { padding: 19px 20px; }
 }
