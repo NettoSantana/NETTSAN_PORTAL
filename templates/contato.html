@@ -1,6 +1,6 @@
 <!-- CAMINHO COMPLETO: C:\Users\vlula\OneDrive\Área de Trabalho\Projetos Backup\NETTSAN_PORTAL\templates\contato.html -->
-<!-- DATA E HORA DO ULTIMO RECODE: 2026-09-10 22:45 -03:00 -->
-<!-- MOTIVO DA ALTERACAO: Simplificar o contato comercial para um unico canal de WhatsApp, removendo repeticoes por solucao. -->
+<!-- DATA E HORA DO ULTIMO RECODE: 2026-09-12 18:41 -03:00 -->
+<!-- MOTIVO DA ALTERACAO: Registrar clique no WhatsApp como conversao do Google Ads antes do redirecionamento. -->
 {% extends "base.html" %}
 
 {% block title %}Contato | NETTSAN{% endblock %}
@@ -27,8 +27,25 @@
             <strong>WhatsApp comercial</strong>
             <p><strong>(71) 98606-1117</strong></p>
             <p>Fale diretamente com nossa equipe e conte qual solução você procura.</p>
-            <a class="button" href="https://wa.me/5571986061117?text=Ola%2C%20quero%20falar%20com%20a%20NETTSAN." target="_blank" rel="noopener noreferrer">Chamar no WhatsApp</a>
+            <a class="button" href="https://wa.me/5571986061117?text=Ola%2C%20quero%20falar%20com%20a%20NETTSAN." onclick="return gtag_report_conversion(this.href);">Chamar no WhatsApp</a>
         </div>
     </div>
 </section>
+
+<script>
+function gtag_report_conversion(url) {
+  var callback = function () {
+    if (typeof(url) != 'undefined') {
+      window.location = url;
+    }
+  };
+  gtag('event', 'conversion', {
+      'send_to': 'AW-18393176047/tIOLCInj0uIcEO-vxsJE',
+      'value': 1.0,
+      'currency': 'BRL',
+      'event_callback': callback
+  });
+  return false;
+}
+</script>
 {% endblock %}
