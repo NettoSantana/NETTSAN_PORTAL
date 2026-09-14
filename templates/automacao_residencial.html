@@ -1,6 +1,6 @@
 <!-- CAMINHO COMPLETO: C:\Users\vlula\OneDrive\Área de Trabalho\Projetos Backup\NETTSAN_PORTAL\templates\automacao_residencial.html -->
-<!-- DATA E HORA DO ULTIMO RECODE: 2026-09-12 16:10 -03:00 -->
-<!-- MOTIVO DA ALTERACAO: Transformar a pagina de Automacao Residencial em oferta comercial com tres kits, limites claros e aviso de assistentes de voz nao inclusos. -->
+<!-- DATA E HORA DO ULTIMO RECODE: 2026-09-14 08:31 -03:00 -->
+<!-- MOTIVO DA ALTERACAO: Reestruturar a pagina como landing page comercial para Google Ads, com CTA direto para WhatsApp, foco em kits, apartamentos e condominios, processo de compra e FAQ. -->
 {% extends "base.html" %}
 
 {% block title %}Automação Residencial | NETTSAN{% endblock %}
@@ -11,19 +11,22 @@
     <div class="container page-hero-grid">
         <div>
             <span class="eyebrow">Automação Residencial</span>
-            <h1>Automatize sua casa sem trocar seus interruptores.</h1>
-            <p>A NETTSAN transforma os pontos que você já usa em uma automação prática e discreta, com controle pelo interruptor, celular, rotinas e assistentes de voz compatíveis.</p>
+            <h1>Automação residencial para apartamentos e casas em Salvador e Região Metropolitana.</h1>
+            <p>Controle iluminação, cortinas, tomadas, ar-condicionado e ambientes pelo celular. Instalação profissional, solução discreta e preparada para crescer com sua casa.</p>
             <div class="chip-row">
-                <span>Iluminação inteligente</span>
                 <span>Controle pelo celular</span>
-                <span>Rotinas automáticas</span>
-                <span>Controle de ar e TV</span>
-                <span>Compatível com Alexa e Google</span>
+                <span>Instalação profissional</span>
+                <span>Sem grandes reformas</span>
+                <span>Expansão por etapas</span>
             </div>
-            <a class="button" href="#kits">Ver kits disponíveis</a>
+            <div class="chip-row">
+                <a class="button" href="#kits">Ver kits</a>
+                <a class="button" href="https://wa.me/5571986061117?text=Ola%2C%20quero%20um%20orcamento%20de%20Automacao%20Residencial%20NETTSAN." onclick="return gtag_report_conversion(this.href);" target="_blank" rel="noopener noreferrer">Falar no WhatsApp</a>
+            </div>
+            <p><strong>Compatível com Alexa e Google Assistente.</strong> Assistente de voz não incluso.</p>
         </div>
         <div class="hero-preview">
-            <img src="{{ url_for('static', filename='img/residencial/hero.jpg') }}" alt="Ambiente residencial com controle por smartphone, caixa de som inteligente e tomada inteligente">
+            <img src="{{ url_for('static', filename='img/residencial/hero.jpg') }}" alt="Ambiente residencial automatizado com controle pelo celular">
         </div>
     </div>
 </section>
@@ -32,113 +35,82 @@
     <div class="container">
         <div class="section-heading residential-kits-heading">
             <span class="eyebrow">Kits prontos</span>
-            <h2>Escolha o tamanho do seu apartamento.</h2>
-            <p>Pacotes completos para automatizar os principais ambientes da casa, preservando os interruptores existentes e evitando grandes reformas.</p>
+            <h2>Escolha o kit que combina com seu apartamento.</h2>
+            <p>Você começa com uma solução pronta e pode ampliar depois. Os valores consideram a infraestrutura elétrica existente no imóvel.</p>
         </div>
 
         <div class="residential-kit-grid">
             <article class="residential-kit-card">
                 <div class="residential-kit-head">
-                    <span class="residential-kit-type">AP Compacto</span>
-                    <h3>Até 1 quarto</h3>
-                    <p>Para apartamentos compactos que querem começar com os principais pontos automatizados.</p>
+                    <span class="residential-kit-type">Kit Essencial</span>
+                    <h3>Até 2 quartos</h3>
+                    <p>Para quem quer começar pelos ambientes principais com uma automação prática, discreta e fácil de usar.</p>
                 </div>
-
-                <div class="residential-kit-price">
-                    <span>A partir de</span>
-                    <strong>R$ 1.690</strong>
-                </div>
-
+                <div class="residential-kit-price"><span>A partir de</span><strong>R$ 2.090</strong></div>
                 <div class="residential-kit-content">
                     <strong>O kit inclui:</strong>
                     <ul>
-                        <li>Sala, 1 quarto, cozinha, banheiro e área de serviço</li>
-                        <li>Até 5 circuitos de iluminação</li>
-                        <li>Controle inteligente em até 2 ambientes por infravermelho</li>
+                        <li>Automação dos principais circuitos de iluminação</li>
+                        <li>Até 3 ambientes com controle por infravermelho</li>
+                        <li>Controle de ar-condicionado e TV compatíveis</li>
                         <li>Central de automação inclusa</li>
-                        <li>Aplicativo no celular</li>
+                        <li>Aplicativo configurado no celular</li>
                         <li>Instalação e configuração</li>
                     </ul>
                 </div>
-
-                <div class="residential-kit-voice">
-                    <strong>Compatível com Alexa e Google Assistente</strong>
-                    <span>Assistentes de voz não acompanham o kit.</span>
-                </div>
-
-                <a class="button residential-kit-button" href="{{ url_for('contato') }}">Solicitar instalação</a>
+                <div class="residential-kit-voice"><strong>Compatível com Alexa e Google Assistente</strong><span>Assistentes de voz não acompanham o kit.</span></div>
+                <a class="button residential-kit-button" href="https://wa.me/5571986061117?text=Ola%2C%20quero%20orcamento%20do%20Kit%20Essencial%20de%20Automacao%20Residencial." onclick="return gtag_report_conversion(this.href);" target="_blank" rel="noopener noreferrer">Quero este kit</a>
             </article>
 
             <article class="residential-kit-card residential-kit-card-featured">
                 <span class="residential-kit-badge">Mais escolhido</span>
-
                 <div class="residential-kit-head">
-                    <span class="residential-kit-type">AP 2 Quartos</span>
-                    <h3>Até 2 quartos</h3>
-                    <p>Nosso pacote principal para apartamentos com os ambientes mais usados integrados em uma única automação.</p>
+                    <span class="residential-kit-type">Kit Conforto</span>
+                    <h3>Até 3 quartos</h3>
+                    <p>Para apartamentos que querem mais ambientes integrados desde o início, mantendo controle manual e pelo celular.</p>
                 </div>
-
-                <div class="residential-kit-price">
-                    <span>A partir de</span>
-                    <strong>R$ 2.090</strong>
-                </div>
-
+                <div class="residential-kit-price"><span>A partir de</span><strong>R$ 2.490</strong></div>
                 <div class="residential-kit-content">
                     <strong>O kit inclui:</strong>
                     <ul>
-                        <li>Sala, 2 quartos, cozinha, banheiro e área de serviço</li>
-                        <li>Até 7 circuitos de iluminação</li>
-                        <li>Controle inteligente em até 3 ambientes por infravermelho</li>
+                        <li>Mais circuitos de iluminação automatizados</li>
+                        <li>Até 4 ambientes com controle por infravermelho</li>
+                        <li>Controle de ar-condicionado e TV compatíveis</li>
                         <li>Central de automação inclusa</li>
-                        <li>Aplicativo no celular</li>
+                        <li>Aplicativo configurado no celular</li>
                         <li>Instalação e configuração</li>
                     </ul>
                 </div>
-
-                <div class="residential-kit-voice">
-                    <strong>Compatível com Alexa e Google Assistente</strong>
-                    <span>Assistentes de voz não acompanham o kit.</span>
-                </div>
-
-                <a class="button residential-kit-button" href="{{ url_for('contato') }}">Quero esse</a>
+                <div class="residential-kit-voice"><strong>Compatível com Alexa e Google Assistente</strong><span>Assistentes de voz não acompanham o kit.</span></div>
+                <a class="button residential-kit-button" href="https://wa.me/5571986061117?text=Ola%2C%20quero%20orcamento%20do%20Kit%20Conforto%20de%20Automacao%20Residencial." onclick="return gtag_report_conversion(this.href);" target="_blank" rel="noopener noreferrer">Quero este kit</a>
             </article>
 
             <article class="residential-kit-card">
                 <div class="residential-kit-head">
-                    <span class="residential-kit-type">AP 3 Quartos</span>
-                    <h3>Até 3 quartos</h3>
-                    <p>Para apartamentos maiores que precisam de mais pontos e ambientes conectados desde o início.</p>
+                    <span class="residential-kit-type">Kit Completo</span>
+                    <h3>Apartamentos maiores</h3>
+                    <p>Para quem quer avançar com mais ambientes, cortinas, tomadas inteligentes e uma solução personalizada.</p>
                 </div>
-
-                <div class="residential-kit-price">
-                    <span>A partir de</span>
-                    <strong>R$ 2.490</strong>
-                </div>
-
+                <div class="residential-kit-price"><span>Projeto</span><strong>Sob medida</strong></div>
                 <div class="residential-kit-content">
-                    <strong>O kit inclui:</strong>
+                    <strong>Pode incluir:</strong>
                     <ul>
-                        <li>Sala, 3 quartos, cozinha, banheiro e área de serviço</li>
-                        <li>Até 9 circuitos de iluminação</li>
-                        <li>Controle inteligente em até 4 ambientes por infravermelho</li>
-                        <li>Central de automação inclusa</li>
-                        <li>Aplicativo no celular</li>
-                        <li>Instalação e configuração</li>
+                        <li>Automação de iluminação em vários ambientes</li>
+                        <li>Cortinas e persianas automatizadas</li>
+                        <li>Tomadas e equipamentos selecionados</li>
+                        <li>Controle de ar-condicionado e TV compatíveis</li>
+                        <li>Cenas, horários e rotinas</li>
+                        <li>Instalação, configuração e expansão personalizada</li>
                     </ul>
                 </div>
-
-                <div class="residential-kit-voice">
-                    <strong>Compatível com Alexa e Google Assistente</strong>
-                    <span>Assistentes de voz não acompanham o kit.</span>
-                </div>
-
-                <a class="button residential-kit-button" href="{{ url_for('contato') }}">Solicitar instalação</a>
+                <div class="residential-kit-voice"><strong>Compatível com Alexa e Google Assistente</strong><span>Assistentes de voz não acompanham o kit.</span></div>
+                <a class="button residential-kit-button" href="https://wa.me/5571986061117?text=Ola%2C%20quero%20um%20orcamento%20do%20Kit%20Completo%20de%20Automacao%20Residencial." onclick="return gtag_report_conversion(this.href);" target="_blank" rel="noopener noreferrer">Quero este kit</a>
             </article>
         </div>
 
         <div class="residential-kit-note">
             <strong>Instalação com a infraestrutura existente.</strong>
-            <p>Os kits consideram os pontos elétricos já disponíveis no imóvel. Adequações elétricas, novos pontos, passagem de cabos, reparos civis e equipamentos adicionais são orçados separadamente.</p>
+            <p>Adequações elétricas, novos pontos, passagem de cabos, reparos civis e equipamentos adicionais são avaliados separadamente.</p>
         </div>
     </div>
 </section>
@@ -146,9 +118,9 @@
 <section class="section" id="campos">
     <div class="container">
         <div class="section-heading">
-            <span class="eyebrow">Personalize sua automação</span>
-            <h2>Quer ir além do kit?</h2>
-            <p>Depois da base instalada, você pode ampliar sua automação com novos equipamentos e funções conforme a sua necessidade.</p>
+            <span class="eyebrow">O que você pode automatizar</span>
+            <h2>Mais conforto no dia a dia, sem complicação.</h2>
+            <p>Comece pelo que faz sentido para sua rotina e amplie quando quiser.</p>
         </div>
         <div class="media-grid">
             <article class="media-card">
@@ -200,6 +172,57 @@
 <section class="section section-soft">
     <div class="container">
         <div class="section-heading">
+            <span class="eyebrow">Como funciona</span>
+            <h2>Da escolha do kit ao controle pelo celular.</h2>
+            <p>Um processo simples para você saber exatamente o que acontece em cada etapa.</p>
+        </div>
+        <div class="stat-grid stat-grid-spaced">
+            <article class="stat-card"><small>1</small><strong>Escolha o kit</strong><span>Você escolhe a opção que mais combina com seu apartamento ou casa.</span></article>
+            <article class="stat-card"><small>2</small><strong>Avaliação do imóvel</strong><span>Validamos os pontos existentes e confirmamos o escopo antes da instalação.</span></article>
+            <article class="stat-card"><small>3</small><strong>Instalação e configuração</strong><span>Instalamos os módulos, configuramos o aplicativo e testamos todos os comandos.</span></article>
+            <article class="stat-card"><small>4</small><strong>Controle pelo celular</strong><span>Você recebe a automação pronta para usar e preparada para futuras expansões.</span></article>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container showcase-grid">
+        <div class="showcase-copy">
+            <span class="eyebrow">Apartamentos e condomínios</span>
+            <h2>Automação residencial sem transformar sua casa em uma obra.</h2>
+            <p>Trabalhamos com soluções discretas e modulares, aproveitando a infraestrutura existente sempre que possível.</p>
+            <div class="metric-list">
+                <div><strong>Salvador</strong><span>Atendimento residencial e em condomínios.</span></div>
+                <div><strong>Lauro de Freitas</strong><span>Projetos para apartamentos e casas.</span></div>
+                <div><strong>Camaçari</strong><span>Automação residencial e expansão por etapas.</span></div>
+                <div><strong>Simões Filho</strong><span>Atendimento mediante avaliação técnica.</span></div>
+            </div>
+            <a class="button" href="https://wa.me/5571986061117?text=Ola%2C%20quero%20automatizar%20meu%20apartamento%20ou%20casa." onclick="return gtag_report_conversion(this.href);" target="_blank" rel="noopener noreferrer">Quero automatizar meu imóvel</a>
+        </div>
+        <div class="hero-preview hero-preview-tall">
+            <img src="{{ url_for('static', filename='img/residencial/cta.jpg') }}" alt="Apartamento com automação residencial">
+        </div>
+    </div>
+</section>
+
+<section class="section section-soft">
+    <div class="container">
+        <div class="section-heading">
+            <span class="eyebrow">Dúvidas frequentes</span>
+            <h2>O que você precisa saber antes de contratar.</h2>
+        </div>
+        <div class="metric-list">
+            <div><strong>Precisa quebrar parede?</strong><span>Depende da infraestrutura, mas muitas soluções podem ser instaladas aproveitando a estrutura elétrica existente.</span></div>
+            <div><strong>Precisa ter Alexa?</strong><span>Não. O sistema funciona pelo celular. Alexa e Google Assistente são opcionais e não estão inclusos nos kits.</span></div>
+            <div><strong>Posso começar pequeno e ampliar depois?</strong><span>Sim. A solução é modular e pode receber novos pontos e dispositivos posteriormente.</span></div>
+            <div><strong>Funciona em apartamento pronto?</strong><span>Sim, mediante avaliação da instalação existente e dos equipamentos que serão automatizados.</span></div>
+        </div>
+    </div>
+</section>
+
+<section class="section section-soft">
+    <div class="container">
+        <div class="section-heading">
             <span class="eyebrow">Linhas e tecnologias</span>
             <h2>Marcas e ecossistemas com que trabalhamos.</h2>
             <p>A NETTSAN atua com linhas parceiras e dispositivos compatíveis com os principais cenários de automação residencial.</p>
@@ -242,7 +265,7 @@
                 <div><strong>Rotinas e integração</strong><span>Configuramos horários, cenas e integrações compatíveis com a estrutura contratada.</span></div>
                 <div><strong>Expansão quando quiser</strong><span>Novos pontos e dispositivos podem ser adicionados posteriormente.</span></div>
             </div>
-            <a class="button" href="{{ url_for('contato') }}">Falar com a NETTSAN</a>
+            <a class="button" href="https://wa.me/5571986061117?text=Ola%2C%20quero%20falar%20sobre%20Automacao%20Residencial." onclick="return gtag_report_conversion(this.href);" target="_blank" rel="noopener noreferrer">Falar com a NETTSAN no WhatsApp</a>
         </div>
         <div class="hero-preview hero-preview-tall">
             <img src="{{ url_for('static', filename='img/residencial/cta.jpg') }}" alt="Exemplo visual de ambiente residencial automatizado">
@@ -254,10 +277,27 @@
     <div class="container final-cta-inner">
         <div>
             <span class="eyebrow eyebrow-light">Automação Residencial</span>
-            <h2>Escolha seu kit e comece pelos ambientes que mais usa.</h2>
-            <p>Fale com a NETTSAN para validar os pontos existentes no imóvel e confirmar a instalação do pacote escolhido.</p>
+            <h2>Quer saber qual kit atende seu apartamento?</h2>
+            <p>Fale com a NETTSAN no WhatsApp e receba uma orientação inicial para seu imóvel. Atendimento em Salvador e Região Metropolitana.</p>
         </div>
-        <a class="button button-white" href="#kits">Ver kits</a>
+        <a class="button button-white" href="https://wa.me/5571986061117?text=Ola%2C%20quero%20saber%20qual%20kit%20de%20Automacao%20Residencial%20atende%20meu%20imovel." onclick="return gtag_report_conversion(this.href);" target="_blank" rel="noopener noreferrer">Falar no WhatsApp</a>
     </div>
 </section>
+<script>
+function gtag_report_conversion(url) {
+  var callback = function () {
+    if (typeof(url) != 'undefined') {
+      window.location = url;
+    }
+  };
+  gtag('event', 'conversion', {
+      'send_to': 'AW-18393176047/tIOLCInj0uIcEO-vxsJE',
+      'value': 1.0,
+      'currency': 'BRL',
+      'event_callback': callback
+  });
+  return false;
+}
+</script>
+
 {% endblock %}
