@@ -1,6 +1,6 @@
 # CAMINHO COMPLETO: C:\Users\vlula\OneDrive\Área de Trabalho\Projetos Backup\NETTSAN_PORTAL\app.py
-# DATA E HORA DO ULTIMO RECODE: 2026-10-07 07:26 -03:00
-# MOTIVO DA ALTERACAO: Adicionar a rota da pagina de Eletrica Residencial.
+# DATA E HORA DO ULTIMO RECODE: 2026-10-07 07:53 -03:00
+# MOTIVO DA ALTERACAO: Adicionar a pagina Solucoes Sob Medida, preservando a rota de Eletrica Residencial.
 
 from flask import Flask, redirect, render_template, url_for
 
@@ -35,6 +35,11 @@ def automacao_residencial():
 @app.get("/eletrica-residencial")
 def eletrica_residencial():
     return render_template("eletrica_residencial.html")
+
+
+@app.get("/solucoes-sob-medida")
+def solucoes_sob_medida():
+    return render_template("solucoes_sob_medida.html")
 
 
 @app.get("/cases")

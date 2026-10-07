@@ -1,0 +1,75 @@
+<!-- CAMINHO COMPLETO: C:\Users\vlula\OneDrive\Área de Trabalho\Projetos Backup\NETTSAN_PORTAL\templates\solucoes_sob_medida.html -->
+<!-- DATA E HORA DO ULTIMO RECODE: 2026-10-07 07:53 -03:00 -->
+<!-- MOTIVO DA ALTERACAO: Criar a aba Solucoes Sob Medida com o projeto de liberacao de maquinas por identificacao. -->
+{% extends "base.html" %}
+
+{% block title %}Soluções Sob Medida | NETTSAN{% endblock %}
+{% block meta_description %}Conheça projetos personalizados da NETTSAN para automação e integração, começando pela liberação de máquinas por identificação do operador. Conte o que sua operação precisa.{% endblock %}
+
+{% block content %}
+<section class="page-hero section page-hero-compact">
+    <div class="container">
+        <span class="eyebrow">Soluções Sob Medida</span>
+        <h1>Desenvolvimento para a necessidade da sua operação.</h1>
+        <p>Transformamos necessidades do cliente em projetos de automação e integração. Conheça um dos projetos desenvolvidos pela NETTSAN e converse conosco sobre o seu processo.</p>
+        <a class="button" href="https://wa.me/5571986061117?text=Ola%2C%20quero%20conversar%20sobre%20uma%20solucao%20sob%20medida%20da%20NETTSAN." target="_blank" rel="noopener noreferrer">Conte o que você precisa</a>
+    </div>
+</section>
+
+<section class="section section-soft" id="identificacao">
+    <div class="container">
+        <div class="section-heading">
+            <span class="eyebrow">Projeto desenvolvido</span>
+            <h2>Liberação de máquinas por identificação.</h2>
+            <p>O operador apresenta o cartão ao leitor. O sistema verifica se a identificação está autorizada e libera o comando da máquina conforme as regras definidas para o projeto.</p>
+            <p><strong>Situação do projeto: protótipo funcional em bancada.</strong></p>
+        </div>
+        <div class="feature-grid">
+            <article>
+                <h3>Identificação do operador</h3>
+                <p>Leitura do cartão para reconhecer a identificação apresentada antes de liberar o comando.</p>
+            </article>
+            <article>
+                <h3>Verificação da autorização</h3>
+                <p>O sistema confere a identificação e aplica as regras de autorização definidas.</p>
+            </article>
+            <article>
+                <h3>Liberação do comando</h3>
+                <p>Após a autorização, o controlador habilita o comando conforme a sequência prevista para o equipamento.</p>
+            </article>
+            <article>
+                <h3>Integração com a máquina</h3>
+                <p>A instalação em campo depende da avaliação do circuito de comando e das condições de operação.</p>
+            </article>
+        </div>
+        <p style="margin-top: 24px;">A identificação controla a autorização de uso. As proteções e os circuitos de segurança da máquina continuam independentes da autorização.</p>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <div class="section-heading">
+            <span class="eyebrow">Seu projeto</span>
+            <h2>Uma solução começa pelo problema que precisa ser resolvido.</h2>
+            <p>Conte como o processo funciona hoje, o que precisa mudar e quais equipamentos estão envolvidos. Fotos ou vídeos ajudam na avaliação.</p>
+        </div>
+        <div class="metric-list">
+            <div><strong>Entendimento</strong><span>Levantamento da necessidade e das condições da operação.</span></div>
+            <div><strong>Proposta</strong><span>Definição do funcionamento, dos materiais, do prazo e do escopo.</span></div>
+            <div><strong>Desenvolvimento</strong><span>Montagem e validação do funcionamento conforme o projeto contratado.</span></div>
+            <div><strong>Implantação</strong><span>Instalação e testes em campo quando incluídos no escopo.</span></div>
+        </div>
+    </div>
+</section>
+
+<section class="section final-cta">
+    <div class="container final-cta-inner">
+        <div>
+            <span class="eyebrow eyebrow-light">Soluções Sob Medida</span>
+            <h2>O que você precisa automatizar?</h2>
+            <p>Fale com a NETTSAN para avaliar a necessidade e definir o próximo passo do projeto.</p>
+        </div>
+        <a class="button button-white" href="https://wa.me/5571986061117?text=Ola%2C%20quero%20conversar%20sobre%20uma%20solucao%20sob%20medida%20da%20NETTSAN." target="_blank" rel="noopener noreferrer">Conte o que você precisa</a>
+    </div>
+</section>
+{% endblock %}

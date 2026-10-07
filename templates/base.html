@@ -1,6 +1,6 @@
 <!-- CAMINHO COMPLETO: C:\Users\vlula\OneDrive\Área de Trabalho\Projetos Backup\NETTSAN_PORTAL\templates\base.html -->
-<!-- DATA E HORA DO ULTIMO RECODE: 2026-10-07 07:26 -03:00 -->
-<!-- MOTIVO DA ALTERACAO: Adicionar Eletrica Residencial ao menu e rodape, acomodando a nova aba. -->
+<!-- DATA E HORA DO ULTIMO RECODE: 2026-10-07 07:53 -03:00 -->
+<!-- MOTIVO DA ALTERACAO: Adicionar Solucoes Sob Medida ao menu principal e ao rodape do portal. -->
 <!doctype html>
 <html lang="pt-BR">
 <head>
@@ -47,6 +47,7 @@
                 <a href="{{ url_for('gestflow') }}" {% if request.endpoint == 'gestflow' %}aria-current="page"{% endif %}>GestFlow</a>
                 <a href="{{ url_for('automacao_residencial') }}" {% if request.endpoint == 'automacao_residencial' %}aria-current="page"{% endif %}>Automação Residencial</a>
                 <a href="{{ url_for('eletrica_residencial') }}" {% if request.endpoint == 'eletrica_residencial' %}aria-current="page"{% endif %}>Elétrica Residencial</a>
+                <a href="{{ url_for('solucoes_sob_medida') }}" {% if request.endpoint == 'solucoes_sob_medida' %}aria-current="page"{% endif %}>Soluções Sob Medida</a>
                 <a href="{{ url_for('sobre') }}" {% if request.endpoint == 'sobre' %}aria-current="page"{% endif %}>Sobre</a>
                 <a href="{{ url_for('contato') }}" {% if request.endpoint == 'contato' %}aria-current="page"{% endif %}>Contato</a>
             </nav>
@@ -75,6 +76,7 @@
                 <a href="{{ url_for('gestflow') }}">GestFlow</a>
                 <a href="{{ url_for('automacao_residencial') }}">Automação Residencial</a>
                 <a href="{{ url_for('eletrica_residencial') }}">Elétrica Residencial</a>
+                <a href="{{ url_for('solucoes_sob_medida') }}">Soluções Sob Medida</a>
             </div>
 
             <div>
