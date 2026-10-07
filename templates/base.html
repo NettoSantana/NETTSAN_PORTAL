@@ -1,6 +1,6 @@
 <!-- CAMINHO COMPLETO: C:\Users\vlula\OneDrive\Área de Trabalho\Projetos Backup\NETTSAN_PORTAL\templates\base.html -->
-<!-- DATA E HORA DO ULTIMO RECODE: 2026-09-12 18:38 -03:00 -->
-<!-- MOTIVO DA ALTERACAO: Instalar a Google Tag do Google Ads AW-18393176047 para deteccao do site e futura medicao de conversoes. -->
+<!-- DATA E HORA DO ULTIMO RECODE: 2026-10-07 07:26 -03:00 -->
+<!-- MOTIVO DA ALTERACAO: Adicionar Eletrica Residencial ao menu e rodape, acomodando a nova aba. -->
 <!doctype html>
 <html lang="pt-BR">
 <head>
@@ -10,6 +10,9 @@
     <meta name="description" content="{% block meta_description %}Soluções NETTSAN em segurança de máquinas, monitoramento industrial, gestão empresarial e automação residencial.{% endblock %}">
     <title>{% block title %}NETTSAN{% endblock %}</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/site.css') }}">
+    <style>
+        @media (min-width: 921px) { .main-nav { flex-wrap: wrap; column-gap: 14px; row-gap: 8px; } }
+    </style>
     <script defer src="{{ url_for('static', filename='js/site.js') }}"></script>
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18393176047"></script>
@@ -43,6 +46,7 @@
                 <a href="{{ url_for('indflow') }}" {% if request.endpoint == 'indflow' %}aria-current="page"{% endif %}>IndFlow</a>
                 <a href="{{ url_for('gestflow') }}" {% if request.endpoint == 'gestflow' %}aria-current="page"{% endif %}>GestFlow</a>
                 <a href="{{ url_for('automacao_residencial') }}" {% if request.endpoint == 'automacao_residencial' %}aria-current="page"{% endif %}>Automação Residencial</a>
+                <a href="{{ url_for('eletrica_residencial') }}" {% if request.endpoint == 'eletrica_residencial' %}aria-current="page"{% endif %}>Elétrica Residencial</a>
                 <a href="{{ url_for('sobre') }}" {% if request.endpoint == 'sobre' %}aria-current="page"{% endif %}>Sobre</a>
                 <a href="{{ url_for('contato') }}" {% if request.endpoint == 'contato' %}aria-current="page"{% endif %}>Contato</a>
             </nav>
@@ -70,6 +74,7 @@
                 <a href="{{ url_for('indflow') }}">IndFlow</a>
                 <a href="{{ url_for('gestflow') }}">GestFlow</a>
                 <a href="{{ url_for('automacao_residencial') }}">Automação Residencial</a>
+                <a href="{{ url_for('eletrica_residencial') }}">Elétrica Residencial</a>
             </div>
 
             <div>

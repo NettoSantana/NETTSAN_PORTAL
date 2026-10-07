@@ -1,6 +1,6 @@
 # CAMINHO COMPLETO: C:\Users\vlula\OneDrive\Área de Trabalho\Projetos Backup\NETTSAN_PORTAL\app.py
-# DATA E HORA DO ULTIMO RECODE: 2026-09-10 19:15 -03:00
-# MOTIVO DA ALTERACAO: Reorganizar o portal por abas de solucao, criar a pagina de Automacao Residencial e redirecionar a rota antiga de cases para NR-12.
+# DATA E HORA DO ULTIMO RECODE: 2026-10-07 07:26 -03:00
+# MOTIVO DA ALTERACAO: Adicionar a rota da pagina de Eletrica Residencial.
 
 from flask import Flask, redirect, render_template, url_for
 
@@ -30,6 +30,11 @@ def gestflow():
 @app.get("/automacao-residencial")
 def automacao_residencial():
     return render_template("automacao_residencial.html")
+
+
+@app.get("/eletrica-residencial")
+def eletrica_residencial():
+    return render_template("eletrica_residencial.html")
 
 
 @app.get("/cases")
