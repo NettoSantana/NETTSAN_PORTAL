@@ -1,6 +1,6 @@
 <!-- CAMINHO COMPLETO: C:\Users\vlula\OneDrive\Área de Trabalho\Projetos Backup\NETTSAN_PORTAL\templates\automacao_industrial.html -->
-<!-- DATA E HORA DO ULTIMO RECODE: 2026-11-25 08:51 -03:00 -->
-<!-- MOTIVO DA ALTERACAO: Criar a pagina principal de Automacao Industrial e posicionar NR12 como uma das frentes de seguranca de maquinas. -->
+<!-- DATA E HORA DO ULTIMO RECODE: 2026-11-25 09:02 -03:00 -->
+<!-- MOTIVO DA ALTERACAO: Exibir na pagina de Automacao Industrial os cases reais de NR12 com fotos de antes e depois. -->
 {% extends "base.html" %}
 
 {% block title %}Automação Industrial | NETTSAN{% endblock %}
@@ -90,23 +90,69 @@
 </section>
 
 <section class="section section-soft" id="nr12">
-    <div class="container showcase-grid">
-        <div class="showcase-copy">
+    <div class="container">
+        <div class="section-heading">
             <span class="eyebrow">NR12 dentro da Automação Industrial</span>
-            <h2>Segurança de máquinas é uma das frentes do projeto industrial.</h2>
-            <p>A NR12 deixa de aparecer como uma solução isolada no portal e passa a fazer parte da Automação Industrial. A NETTSAN mantém uma página específica com exemplos de proteções, adequações e cases já executados.</p>
-            <div class="chip-row">
-                <span>Proteções mecânicas</span>
-                <span>Intertravamentos</span>
-                <span>Adequações elétricas</span>
-                <span>Segurança aplicada</span>
-            </div>
-            <a class="button" href="{{ url_for('nr12') }}">Ver segurança de máquinas / NR12</a>
+            <h2>Segurança de máquinas aplicada em projetos reais.</h2>
+            <p>A NR12 faz parte da nossa atuação industrial. Veja exemplos de soluções já executadas em máquinas reais, combinando proteção física e integração de segurança.</p>
         </div>
 
-        <div class="page-visual page-visual-nr12">
-            <span class="visual-tag">Segurança integrada</span>
-            <strong>Proteção física, comando de segurança e adequações avaliadas dentro do conjunto da máquina e do processo.</strong>
+        <div class="nr12-case-stack">
+            <article class="nr12-case-card">
+                <div class="nr12-case-copy">
+                    <span class="solution-number">Case 01</span>
+                    <h3>Duas serras-fita industriais</h3>
+                    <p>Projeto com foco em reduzir a exposição às zonas de risco, combinando proteção física e integração de segurança no conjunto.</p>
+                    <ul class="bullet-list">
+                        <li>Levantamento das condições reais do equipamento</li>
+                        <li>Desenvolvimento de proteções específicas</li>
+                        <li>Integração elétrica relacionada ao sistema de segurança</li>
+                    </ul>
+                </div>
+                <div class="photo-pair">
+                    <figure class="case-photo">
+                        <img src="{{ url_for('static', filename='img/nr12/01-serra-fita-industrial-antes-da-instala-o-das-novas-prote-es-.webp') }}" alt="Serra-fita industrial antes da instalação das novas proteções de segurança">
+                        <figcaption>Antes</figcaption>
+                    </figure>
+                    <figure class="case-photo">
+                        <img src="{{ url_for('static', filename='img/nr12/03-serra-fita-01-ap-s-instala-o-da-prote-o-f-sica-amarela.webp') }}" alt="Serra-fita após instalação da proteção física amarela">
+                        <figcaption>Depois</figcaption>
+                    </figure>
+                </div>
+            </article>
+
+            <article class="nr12-case-card">
+                <div class="nr12-case-copy">
+                    <span class="solution-number">Case 02</span>
+                    <h3>Prensa pneumática</h3>
+                    <p>Solução voltada a controlar a área de operação da prensa, com proteção física e segurança ativa integradas ao conjunto.</p>
+                    <ul class="bullet-list">
+                        <li>Levantamento da região de operação</li>
+                        <li>Conceito e fabricação da proteção</li>
+                        <li>Implantação e ajustes dentro do escopo do projeto</li>
+                    </ul>
+                </div>
+                <div class="photo-pair">
+                    <figure class="case-photo">
+                        <img src="{{ url_for('static', filename='img/nr12/06-prensa-pneum-tica-antes-da-adequa-o-de-seguran-a.webp') }}" alt="Prensa pneumática antes da adequação de segurança">
+                        <figcaption>Antes</figcaption>
+                    </figure>
+                    <figure class="case-photo">
+                        <img src="{{ url_for('static', filename='img/nr12/09-prensa-pneum-tica-com-solu-o-de-seguran-a-instalada.webp') }}" alt="Prensa pneumática com solução de segurança instalada">
+                        <figcaption>Depois</figcaption>
+                    </figure>
+                </div>
+            </article>
+        </div>
+
+        <div class="contact-note">
+            <strong>NR12 é uma das frentes da nossa Automação Industrial.</strong>
+            <p>A página específica de NR12 continua disponível com o detalhamento completo dos serviços e cases.</p>
+        </div>
+
+        <div class="hero-actions">
+            <a class="button" href="{{ url_for('nr12') }}#cases">Ver todos os cases de NR12</a>
+            <a class="button button-ghost" href="{{ url_for('contato') }}">Falar sobre segurança de máquinas</a>
         </div>
     </div>
 </section>
