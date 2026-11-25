@@ -1,10 +1,10 @@
 <!-- CAMINHO COMPLETO: C:\Users\vlula\OneDrive\Área de Trabalho\Projetos Backup\NETTSAN_PORTAL\templates\index.html -->
-<!-- DATA E HORA DO ULTIMO RECODE: 2026-10-07 07:55 -03:00 -->
-<!-- MOTIVO DA ALTERACAO: Atualizar a Home com Eletrica Residencial, Solucoes Sob Medida e telas reais do IndFlow e Utilidades. -->
+<!-- DATA E HORA DO ULTIMO RECODE: 2026-11-25 08:51 -03:00 -->
+<!-- MOTIVO DA ALTERACAO: Substituir NR12 como solucao principal por Automacao Industrial e manter NR12 como subarea de seguranca de maquinas. -->
 {% extends "base.html" %}
 
 {% block title %}NETTSAN | Tecnologia, elétrica e soluções sob medida{% endblock %}
-{% block meta_description %}Conheça NR12, IndFlow, GestFlow, Automação Residencial, Elétrica Residencial e Soluções Sob Medida da NETTSAN.{% endblock %}
+{% block meta_description %}Conheça Automação Industrial, IndFlow, GestFlow, Automação Residencial, Elétrica Residencial e Soluções Sob Medida da NETTSAN.{% endblock %}
 
 {% block content %}
 <style>
@@ -26,7 +26,7 @@
                 <a class="button button-ghost" href="{{ url_for('contato') }}">Falar com a NETTSAN</a>
             </div>
             <div class="hero-tags" aria-label="Principais soluções">
-                <a href="{{ url_for('nr12') }}">NR12</a>
+                <a href="{{ url_for('automacao_industrial') }}">Automação Industrial</a>
                 <a href="{{ url_for('indflow') }}">IndFlow</a>
                 <a href="{{ url_for('gestflow') }}">GestFlow</a>
                 <a href="{{ url_for('automacao_residencial') }}">Automação Residencial</a>
@@ -65,7 +65,7 @@
                     <span style="height: 76%"></span>
                 </div>
                 <div class="dashboard-metrics">
-                    <div><small>Industrial</small><strong>NR12 + IndFlow</strong></div>
+                    <div><small>Industrial</small><strong>Automação Industrial + IndFlow</strong></div>
                     <div><small>Gestão, residencial e projetos</small><strong>GestFlow + Soluções Sob Medida</strong></div>
                 </div>
             </div>
@@ -75,7 +75,7 @@
 
 <section class="position-strip" aria-label="Áreas de atuação">
     <div class="container position-strip-grid home-areas-grid">
-        <span>NR12</span>
+        <span>Automação Industrial</span>
         <span>IndFlow</span>
         <span>GestFlow</span>
         <span>Automação Residencial</span>
@@ -95,15 +95,15 @@
         <div class="solution-grid">
             <article class="solution-card">
                 <span class="solution-number">01</span>
-                <span class="solution-label">Segurança de máquinas</span>
-                <h3>NR12</h3>
-                <p>Adequações mecânicas e elétricas, proteções, enclausuramentos, intertravamentos e aplicações reais executadas.</p>
+                <span class="solution-label">Automação e controle industrial</span>
+                <h3>Automação Industrial</h3>
+                <p>Projetos, modernização e integração de máquinas e processos industriais, do painel elétrico ao controle e monitoramento.</p>
                 <ul>
-                    <li>Atuação mecânica e elétrica</li>
-                    <li>Projetos e aplicações reais</li>
-                    <li>Projetos sob medida</li>
+                    <li>CLP, IHM e acionamentos</li>
+                    <li>Painéis, retrofit e integração industrial</li>
+                    <li>NR12 e segurança de máquinas</li>
                 </ul>
-                <a class="text-link" href="{{ url_for('nr12') }}">Ver NR12 →</a>
+                <a class="text-link" href="{{ url_for('automacao_industrial') }}">Ver Automação Industrial →</a>
             </article>
 
             <article class="solution-card solution-card-featured">
@@ -183,7 +183,7 @@
         <div class="split-copy">
             <p>Entendemos a necessidade, definimos a solução adequada e entregamos tecnologia que faça sentido na operação ou no ambiente do cliente.</p>
             <div class="pillar-grid home-pillar-grid">
-                <div><strong>NR12</strong><span>Segurança aplicada à máquina e ao processo.</span></div>
+                <div><strong>Automação Industrial</strong><span>Controle, modernização, integração e segurança de máquinas.</span></div>
                 <div><strong>IndFlow</strong><span>Dados simples para decisões melhores no chão de fábrica.</span></div>
                 <div><strong>GestFlow</strong><span>Gestão mais organizada e menos controles paralelos.</span></div>
                 <div><strong>Automação Residencial</strong><span>Controle dos ambientes conforme a rotina da casa.</span></div>
@@ -277,10 +277,10 @@
         </div>
         <div class="mini-case-grid">
             <article class="mini-case-card">
-                <span class="solution-number">NR12</span>
-                <h3>Proteção de serras e prensa pneumática</h3>
-                <p>Proteções para serras-fita e prensa pneumática, com registros de antes e depois da solução aplicada.</p>
-                <a class="text-link" href="{{ url_for('nr12') }}#cases">Ver cases de NR12 →</a>
+                <span class="solution-number">Industrial</span>
+                <h3>Segurança de máquinas / NR12</h3>
+                <p>Proteções para serras-fita e prensa pneumática, como uma das frentes da nossa atuação em automação industrial.</p>
+                <a class="text-link" href="{{ url_for('automacao_industrial') }}#nr12">Ver Automação Industrial →</a>
             </article>
             <article class="mini-case-card">
                 <span class="solution-number">IndFlow</span>

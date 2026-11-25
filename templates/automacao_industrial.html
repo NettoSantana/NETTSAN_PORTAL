@@ -1,0 +1,124 @@
+<!-- CAMINHO COMPLETO: C:\Users\vlula\OneDrive\Área de Trabalho\Projetos Backup\NETTSAN_PORTAL\templates\automacao_industrial.html -->
+<!-- DATA E HORA DO ULTIMO RECODE: 2026-11-25 08:51 -03:00 -->
+<!-- MOTIVO DA ALTERACAO: Criar a pagina principal de Automacao Industrial e posicionar NR12 como uma das frentes de seguranca de maquinas. -->
+{% extends "base.html" %}
+
+{% block title %}Automação Industrial | NETTSAN{% endblock %}
+{% block meta_description %}Automação industrial NETTSAN com CLP, IHM, acionamentos, painéis, retrofit, integração industrial e NR12 para máquinas e processos.{% endblock %}
+
+{% block content %}
+<section class="page-hero section">
+    <div class="container page-hero-grid">
+        <div>
+            <span class="eyebrow">Automação Industrial</span>
+            <h1>Controle, modernização e integração para máquinas e processos.</h1>
+            <p>A NETTSAN atua da instrumentação e comando ao controle da máquina, modernizando equipamentos, integrando sistemas e desenvolvendo soluções para a necessidade real da operação.</p>
+            <div class="chip-row">
+                <span>CLP e IHM</span>
+                <span>Inversores e servos</span>
+                <span>Painéis elétricos</span>
+                <span>Retrofit</span>
+                <span>Integração industrial</span>
+                <span>NR12</span>
+            </div>
+            <div class="hero-actions">
+                <a class="button" href="{{ url_for('contato') }}">Falar sobre meu projeto</a>
+                <a class="button button-ghost" href="#areas">Conhecer áreas de atuação</a>
+            </div>
+        </div>
+
+        <div class="page-visual page-visual-indflow">
+            <span class="visual-tag">Máquina + controle + integração</span>
+            <strong>Automação aplicada para modernizar equipamentos, conectar processos e tornar a operação mais controlada.</strong>
+        </div>
+    </div>
+</section>
+
+<section class="section" id="areas">
+    <div class="container">
+        <div class="section-heading">
+            <span class="eyebrow">Áreas de atuação</span>
+            <h2>Automação industrial do campo ao controle.</h2>
+            <p>O escopo é definido conforme a máquina, o processo e a necessidade do cliente. Atuamos em projetos novos, melhorias e modernização de sistemas existentes.</p>
+        </div>
+
+        <div class="feature-grid">
+            <article>
+                <h3>CLP e IHM</h3>
+                <p>Programação, alterações, diagnóstico e integração de controladores e interfaces de operação.</p>
+            </article>
+            <article>
+                <h3>Inversores e acionamentos</h3>
+                <p>Aplicações com inversores de frequência, soft-starters, servodrives e acionamentos compatíveis com o processo.</p>
+            </article>
+            <article>
+                <h3>Painéis e comandos</h3>
+                <p>Montagem, adequação e modernização de painéis elétricos, comandos e sistemas de controle.</p>
+            </article>
+            <article>
+                <h3>Retrofit de máquinas</h3>
+                <p>Atualização de equipamentos e sistemas obsoletos para recuperar confiabilidade, disponibilidade e capacidade de integração.</p>
+            </article>
+            <article>
+                <h3>Integração industrial</h3>
+                <p>Integração entre sensores, máquinas, redes industriais, supervisórios e sistemas de monitoramento.</p>
+            </article>
+            <article>
+                <h3>NR12 e segurança de máquinas</h3>
+                <p>Proteções, intertravamentos, adequações elétricas e soluções de segurança integradas ao equipamento.</p>
+            </article>
+        </div>
+    </div>
+</section>
+
+<section class="section section-blue">
+    <div class="container split-section">
+        <div>
+            <span class="eyebrow eyebrow-light">Uma visão completa</span>
+            <h2>Da máquina isolada ao processo conectado.</h2>
+        </div>
+        <div class="split-copy">
+            <p>Podemos atuar em uma necessidade pontual ou integrar diferentes camadas da automação, respeitando a infraestrutura existente e o objetivo do projeto.</p>
+            <div class="pillar-grid">
+                <div><strong>Campo</strong><span>Sensores, atuadores e sinais da máquina.</span></div>
+                <div><strong>Controle</strong><span>CLP, IHM, inversores, servos e lógica de processo.</span></div>
+                <div><strong>Integração</strong><span>Redes, supervisão, monitoramento e troca de dados.</span></div>
+                <div><strong>Segurança</strong><span>NR12, proteções e intertravamentos dentro do escopo contratado.</span></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section section-soft" id="nr12">
+    <div class="container showcase-grid">
+        <div class="showcase-copy">
+            <span class="eyebrow">NR12 dentro da Automação Industrial</span>
+            <h2>Segurança de máquinas é uma das frentes do projeto industrial.</h2>
+            <p>A NR12 deixa de aparecer como uma solução isolada no portal e passa a fazer parte da Automação Industrial. A NETTSAN mantém uma página específica com exemplos de proteções, adequações e cases já executados.</p>
+            <div class="chip-row">
+                <span>Proteções mecânicas</span>
+                <span>Intertravamentos</span>
+                <span>Adequações elétricas</span>
+                <span>Segurança aplicada</span>
+            </div>
+            <a class="button" href="{{ url_for('nr12') }}">Ver segurança de máquinas / NR12</a>
+        </div>
+
+        <div class="page-visual page-visual-nr12">
+            <span class="visual-tag">Segurança integrada</span>
+            <strong>Proteção física, comando de segurança e adequações avaliadas dentro do conjunto da máquina e do processo.</strong>
+        </div>
+    </div>
+</section>
+
+<section class="section final-cta">
+    <div class="container final-cta-inner">
+        <div>
+            <span class="eyebrow eyebrow-light">Automação Industrial</span>
+            <h2>Tem uma máquina ou processo que precisa de melhoria?</h2>
+            <p>Apresente a necessidade para avaliarmos controle, modernização, integração ou segurança dentro do mesmo projeto.</p>
+        </div>
+        <a class="button button-white" href="{{ url_for('contato') }}">Falar com a NETTSAN</a>
+    </div>
+</section>
+{% endblock %}

@@ -1,13 +1,13 @@
 <!-- CAMINHO COMPLETO: C:\Users\vlula\OneDrive\Área de Trabalho\Projetos Backup\NETTSAN_PORTAL\templates\base.html -->
-<!-- DATA E HORA DO ULTIMO RECODE: 2026-10-07 07:53 -03:00 -->
-<!-- MOTIVO DA ALTERACAO: Adicionar Solucoes Sob Medida ao menu principal e ao rodape do portal. -->
+<!-- DATA E HORA DO ULTIMO RECODE: 2026-11-25 08:51 -03:00 -->
+<!-- MOTIVO DA ALTERACAO: Substituir NR12 no menu principal e no rodape por Automacao Industrial, mantendo NR12 dentro da area industrial. -->
 <!doctype html>
 <html lang="pt-BR">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#184178">
-    <meta name="description" content="{% block meta_description %}Soluções NETTSAN em segurança de máquinas, monitoramento industrial, gestão empresarial e automação residencial.{% endblock %}">
+    <meta name="description" content="{% block meta_description %}Soluções NETTSAN em automação industrial, monitoramento industrial, gestão empresarial e automação residencial.{% endblock %}">
     <title>{% block title %}NETTSAN{% endblock %}</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/site.css') }}">
     <style>
@@ -42,7 +42,7 @@
 
             <nav class="main-nav" id="menu-principal" aria-label="Navegação principal" data-main-nav>
                 <a href="{{ url_for('home') }}" {% if request.endpoint == 'home' %}aria-current="page"{% endif %}>Início</a>
-                <a href="{{ url_for('nr12') }}" {% if request.endpoint == 'nr12' %}aria-current="page"{% endif %}>NR12</a>
+                <a href="{{ url_for('automacao_industrial') }}" {% if request.endpoint in ['automacao_industrial', 'nr12'] %}aria-current="page"{% endif %}>Automação Industrial</a>
                 <a href="{{ url_for('indflow') }}" {% if request.endpoint == 'indflow' %}aria-current="page"{% endif %}>IndFlow</a>
                 <a href="{{ url_for('gestflow') }}" {% if request.endpoint == 'gestflow' %}aria-current="page"{% endif %}>GestFlow</a>
                 <a href="{{ url_for('automacao_residencial') }}" {% if request.endpoint == 'automacao_residencial' %}aria-current="page"{% endif %}>Automação Residencial</a>
@@ -66,12 +66,12 @@
                 <a class="brand brand-footer" href="{{ url_for('home') }}" aria-label="NETTSAN - Início">
                     <img class="brand-logo brand-logo-mark brand-logo-footer" src="{{ url_for('static', filename='img/brand/nettsan-n.png') }}" alt="" aria-hidden="true">
                 </a>
-                <p>Tecnologia e engenharia para produção, gestão, segurança de máquinas e automação residencial.</p>
+                <p>Tecnologia e engenharia para automação industrial, produção, gestão e automação residencial.</p>
             </div>
 
             <div>
                 <h2>Soluções</h2>
-                <a href="{{ url_for('nr12') }}">NR12</a>
+                <a href="{{ url_for('automacao_industrial') }}">Automação Industrial</a>
                 <a href="{{ url_for('indflow') }}">IndFlow</a>
                 <a href="{{ url_for('gestflow') }}">GestFlow</a>
                 <a href="{{ url_for('automacao_residencial') }}">Automação Residencial</a>
@@ -93,7 +93,7 @@
         </div>
         <div class="container footer-bottom">
             <span>© <span data-current-year></span> NETTSAN.</span>
-            <span>NR12 · IndFlow · GestFlow · Automação Residencial</span>
+            <span>Automação Industrial · IndFlow · GestFlow · Automação Residencial</span>
         </div>
     </footer>
 </body>
