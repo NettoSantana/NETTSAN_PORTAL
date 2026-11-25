@@ -1,6 +1,6 @@
 /* CAMINHO COMPLETO: C:\Users\vlula\OneDrive\Área de Trabalho\Projetos Backup\NETTSAN_PORTAL\static\css\site.css
-   DATA E HORA DO ULTIMO RECODE: 2026-09-12 16:10 -03:00
-   MOTIVO DA ALTERACAO: Estilizar os tres kits comerciais da pagina de Automacao Residencial e manter o restante do portal sem alteracoes. */
+   DATA E HORA DO ULTIMO RECODE: 2026-11-25 09:05 -03:00
+   MOTIVO DA ALTERACAO: Estilizar os cards visuais da pagina de Automacao Industrial com imagens por area e registros reais de NR12. */
 
 :root {
     --blue:#184178; --blue-dark:#0c2b52; --blue-deep:#081f3d; --blue-soft:#edf4fb;
@@ -1007,4 +1007,97 @@ p { color:var(--muted); }
     }
     .residential-kit-badge { top: 18px; left: 24px; right: auto; }
     .residential-kit-note { padding: 19px 20px; }
+}
+
+
+/* AUTOMACAO INDUSTRIAL - CARDS VISUAIS 2026-11-25 */
+.industrial-capabilities { overflow: hidden; }
+.industrial-capability-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+}
+.industrial-capability-card {
+    overflow: hidden;
+    border: 1px solid var(--line);
+    border-radius: 24px;
+    background: var(--white);
+    box-shadow: 0 18px 46px rgba(12,43,82,.08);
+}
+.industrial-capability-media,
+.industrial-capability-gallery {
+    position: relative;
+    overflow: hidden;
+    background: #dfe7ef;
+}
+.industrial-capability-media { height: 270px; }
+.industrial-capability-media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 220ms ease;
+}
+.industrial-capability-card:hover .industrial-capability-media img { transform: scale(1.025); }
+.industrial-photo-label {
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    z-index: 2;
+    padding: 7px 10px;
+    border-radius: 999px;
+    color: var(--white);
+    background: rgba(8,31,61,.86);
+    font-size: .68rem;
+    font-weight: 850;
+    text-transform: uppercase;
+    letter-spacing: .08em;
+    backdrop-filter: blur(8px);
+}
+.industrial-photo-label-real { background: rgba(31,143,95,.92); }
+.industrial-capability-body { padding: 28px; }
+.industrial-capability-body h3 {
+    margin: 8px 0 12px;
+    color: var(--blue-dark);
+    font-size: 1.65rem;
+}
+.industrial-capability-body > p { margin-bottom: 16px; }
+.industrial-capability-body .bullet-list { margin-bottom: 0; }
+.industrial-capability-body .text-link { margin-top: 8px; }
+.industrial-capability-gallery {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    height: 270px;
+}
+.industrial-capability-gallery figure {
+    position: relative;
+    margin: 0;
+    overflow: hidden;
+}
+.industrial-capability-gallery figure + figure { border-left: 2px solid var(--white); }
+.industrial-capability-gallery img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.industrial-capability-gallery figcaption {
+    position: absolute;
+    left: 12px;
+    bottom: 12px;
+    padding: 6px 9px;
+    border-radius: 999px;
+    color: var(--white);
+    background: rgba(8,31,61,.82);
+    font-size: .7rem;
+    font-weight: 850;
+    text-transform: uppercase;
+    letter-spacing: .06em;
+}
+@media (max-width: 920px) {
+    .industrial-capability-grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 620px) {
+    .industrial-capability-media,
+    .industrial-capability-gallery { height: 220px; }
+    .industrial-capability-body { padding: 22px; }
+    .industrial-photo-label { top: 12px; left: 12px; }
 }
